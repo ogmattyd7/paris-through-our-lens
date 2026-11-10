@@ -194,7 +194,8 @@ export default function App() {
       });
       gsap.utils.toArray<HTMLElement>('.ch').forEach((ch) => {
         const k = Number(ch.dataset.k);
-        const enter = () => { setHud(k); visit(k); setMood(stops[k].ch.tone); };
+        const from = stops.slice(0, k).reverse().find((s) => !s.outside)?.d ?? 0;
+        const enter = () => { setHud(k); visit(k); setMood(stops[k].ch.tone); if (stops[k].outside) show((m) => m.overview(from)); };
         marks.push({ t: ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) enter(); } }), apply: enter });
       });
       // Jumps (End key, Back button, fast flicks) fire callbacks of skipped triggers in creation order, and a
