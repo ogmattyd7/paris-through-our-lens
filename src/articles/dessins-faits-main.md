@@ -1,5 +1,5 @@
 ---
-title: Handmade drawings, €25
+title: Kill the past
 author: 
 ---
 
