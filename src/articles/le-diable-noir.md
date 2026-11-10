@@ -1,5 +1,5 @@
 ---
-title: The Black Devil, in a shop window
+title: The Black Devil
 author: 
 ---
 

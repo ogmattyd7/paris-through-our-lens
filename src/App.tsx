@@ -8,11 +8,12 @@ import { cumulative, pointAt, type LngLat } from './map/geo';
 import { photos, pending, photoUrl, formatCoords, legBetween, arrondissementLabel } from './photos';
 import type { PendingPhoto } from './types';
 import { setMood, setSound } from './ambience';
+import Barricade from './Barricade';
 
 gsap.registerPlugin(ScrollTrigger);
 
 type Art = { caption: string; mid?: string; image?: string; color?: string; credit?: string; license?: string; source?: string };
-type Chapter = { era: string; tone: 'past' | 'modern' | 'future'; place?: string; when: string; scene: string[]; text: string[]; approach: string; note: string; art: Art };
+type Chapter = { era: string; tone: 'past' | 'modern' | 'future'; place?: string; when: string; scene: string[]; text: string[]; note?: string; art: Art; outside?: boolean; caption?: string; barricade?: boolean };
 type Leg = NonNullable<ReturnType<typeof legBetween>>;
 type AnyPhoto = PendingPhoto & { lat?: number | null; lng?: number | null };
 type Stop = { k: number; photo: AnyPhoto; ch: Chapter; d: number; at: LngLat; located: boolean; outside: boolean; leg?: Leg; s: number; e: number };
@@ -47,7 +48,7 @@ let queue: number[] = [];
 chapters.order.forEach((id, k) => {
   const photo = byId.get(id)!;
   const ch = CH[id];
-  const st: Stop = { k, photo, ch, d: total, at: route[route.length - 1], located: photo.lat != null, outside: !!ch.place?.startsWith('Beyond the walls'), s: 0, e: 0 };
+  const st: Stop = { k, photo, ch, d: total, at: route[route.length - 1], located: photo.lat != null, outside: !!ch.outside, s: 0, e: 0 };
   stops.push(st);
   if (st.outside) return;
   const b = bounds.get(id);
@@ -59,13 +60,15 @@ chapters.order.forEach((id, k) => {
 });
 stops.forEach((st) => { st.at = st.located ? [st.photo.lng!, st.photo.lat!] : pointAt(route, cum, st.d).here; });
 const waypoints: Waypoint[] = stops.filter((s) => !s.outside).map((s) => ({ lng: s.at[0], lat: s.at[1], n: s.k + 1, located: s.located }));
-const firstOutside = stops.findIndex((s) => s.outside);
+const grenoble = stops.filter((s) => s.outside || s.ch.caption?.includes('Grenoble')).length;
+const mapped = stops.filter((s) => s.located && !s.ch.caption?.includes('Grenoble')).length;
+const unplaced = stops.filter((s) => !s.located && !s.outside).length;
 
 function placeOf(st: Stop) {
   const { photo: p, ch } = st;
   if (st.located) return ch.place ?? [p.place, arrondissementLabel(p.arrondissement)].filter(Boolean).join(', ');
   if (st.outside) return ch.place ?? 'Outside Paris';
-  return `${ch.place ?? 'A wall'} — met along the way`;
+  return ch.place ?? 'Exact spot not recorded';
 }
 
 export default function App() {
@@ -163,12 +166,12 @@ export default function App() {
       gsap.utils.toArray<HTMLElement>('.approach').forEach((el) => {
         const k = Number(el.dataset.k);
         const st = stops[k];
-        const from = k && !stops[k - 1].outside ? stops[k - 1].d : k ? total : 0;
+        const from = stops.slice(0, k).reverse().find((s) => !s.outside)?.d ?? 0;
         const street = el.querySelector('.walk-street')!, quart = el.querySelector('.walk-q')!, left = el.querySelector('.walk-left')!;
         const arrive = () => {
           setHud(k);
           setMood('street');
-          if (st.outside) { show((m) => m.overview(true)); visit(stops.length); }
+          if (st.outside) { show((m) => m.overview(from)); visit(k); }
         };
         marks.push({ t: ScrollTrigger.create({
           trigger: el, start: 'top 85%', end: 'bottom 35%',
@@ -204,7 +207,7 @@ export default function App() {
       };
       ScrollTrigger.addEventListener('scrollEnd', settle);
       ScrollTrigger.addEventListener('refresh', settle);
-      ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => show((m) => m.overview(true)) });
+      ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => show((m) => m.overview(total)) });
       if (reduced) return;
       gsap.from('.hero-line', { yPercent: 110, opacity: 0, duration: 1.8, stagger: 0.12, ease: 'expo.out', delay: 0.2 });
     }, root);
@@ -269,12 +272,11 @@ export default function App() {
         <main className="story">
           <section className="hero">
             <div className="hero-inner">
-              <p className="kicker hero-line">Class project · a snail-shaped walk</p>
+              <p className="kicker hero-line">A walk through the cauldron</p>
               <h1><span className="hero-line">Paris,</span><span className="hero-line"><em>on foot</em></span></h1>
               <p className="hero-lede hero-line">
-                Paris curls like a shell: from the 1st to the 20th, the arrondissements spiral around the Île de la Cité.
-                We start at Point Zero, in front of Notre-Dame, and unwind the spiral on foot. Twenty-two pictures gathered along the way,
-                and with every step, history rises to the surface.
+                History, art, politics, violence, revolution, commerce and modernity, all boiling in one old, living pot.
+                {' '}{stops.length} photographs, read wall by wall: what the street says now, and what it said before.
               </p>
               <p className="hero-scroll hero-line">Scroll to walk ↓</p>
             </div>
@@ -284,26 +286,19 @@ export default function App() {
             const { photo: p, ch, k } = st;
             return (
               <div key={p.id} className="stop">
-                {k === firstOutside && (
-                  <section className="coda">
-                    <p className="reveal kicker">Beyond the walls</p>
-                    <h2 className="reveal">The shell opens</h2>
-                    <p className="reveal">Three pictures that don't seem to have been taken in Paris. We leave the spiral: walls elsewhere in France answer the walls of the capital.</p>
-                  </section>
-                )}
+                
                 <section className="approach" data-k={k}>
                   <div className="approach-card">
-                    <p className="kicker">Walking · towards stop {ROMAN[k + 1]}</p>
+                    <p className="kicker">On foot · stop {ROMAN[k + 1]}</p>
                     <h3>{p.title}</h3>
-                    <p className="walk-dist">{st.outside ? 'Outside Paris' : <span className="walk-left">on the way</span>}</p>
+                    <p className="walk-dist">{st.outside ? 'Grenoble · the same walls, another city' : <span className="walk-left">on the way</span>}</p>
                     <p className="walk-street" />
                     <p className="walk-q" />
-                    <p className="walk-text">{ch.approach}</p>
                   </div>
                 </section>
                 <section id={p.id} className={`ch tone-${ch.tone}`} data-k={k}>
                   <div className="ch-bg">
-                    <img src={artUrl(ch.art.image)} srcSet={ch.art.mid ? `${artUrl(ch.art.mid)} 900w, ${artUrl(ch.art.image)} 1920w` : undefined} sizes="60vw" alt="" loading={k > 1 ? 'lazy' : 'eager'} style={{ background: ch.art.color }} />
+                    {ch.art.image ? <img src={artUrl(ch.art.image)} srcSet={ch.art.mid ? `${artUrl(ch.art.mid)} 900w, ${artUrl(ch.art.image)} 1920w` : undefined} sizes="60vw" alt="" loading={k > 1 ? 'lazy' : 'eager'} style={{ background: ch.art.color }} /> : <i className="ch-neon" />}
                     <i className="ch-veil" />
                   </div>
                   <div className="ch-inner">
@@ -315,7 +310,7 @@ export default function App() {
                     <div className="ch-body">
                       <figure className="ch-plate">
                         <img src={photoUrl(p.mid)} srcSet={`${photoUrl(p.mid)} 800w, ${photoUrl(p.file)} 1600w`} sizes="(max-width: 800px) 90vw, 40vw" alt={p.title} width={p.width} height={p.height} loading="lazy" style={{ background: p.color }} />
-                        <figcaption>{st.located ? formatCoords(p.lat!, p.lng!) : st.outside ? 'Outside Paris' : 'Met along the way · exact spot still to be found'}</figcaption>
+                        <figcaption>{ch.caption ?? (st.located ? formatCoords(p.lat!, p.lng!) : st.outside ? 'Taken in Grenoble' : 'Exact spot not recorded')}</figcaption>
                       </figure>
                       <div className="ch-text">
                         <p className="kicker today">In the picture</p>
@@ -326,12 +321,13 @@ export default function App() {
                       <p className="kicker ch-when">{ch.when}</p>
                       {ch.scene.map((t, j) => <p key={j}>{t.split(' ').map((w, i) => <span key={i} className="w">{w} </span>)}</p>)}
                     </div>
+                    {ch.barricade && <Barricade />}
                     <footer className="ch-note">
-                      <p className="reveal">{ch.note}</p>
-                      <small className="reveal">
+                      {ch.note && <p className="reveal">{ch.note}</p>}
+                      {ch.art.image && <small className="reveal">
                         Background: {ch.art.caption}. {ch.art.credit && `${ch.art.credit} · `}{ch.art.license}
                         {ch.art.source && <> · <a href={ch.art.source} target="_blank" rel="noreferrer">Wikimedia Commons</a></>}
-                      </small>
+                      </small>}
                     </footer>
                   </div>
                 </section>
@@ -341,10 +337,10 @@ export default function App() {
 
           <section className="outro">
             <p className="reveal kicker">End of the walk</p>
-            <h2 className="reveal">We walk home.</h2>
+            <h2 className="reveal">Still boiling.</h2>
             <p className="reveal">
-              {km(total)} of spiral, {photos.length} places found on the map, {pending.length} pictures still without an exact address. If you know where they were taken,
-              tell us: the shell will grow.
+              {km(total)} on foot through Paris. {mapped} photos pinned where they were taken, {grenoble} walls from Grenoble pinned to Paris's history of protest,
+              {' '}{unplaced} pictures whose exact spot wasn't recorded.
             </p>
             <button className="reveal back" onClick={() => window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' })}>Back to Point Zero ↑</button>
           </section>

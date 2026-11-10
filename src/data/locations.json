@@ -1,34 +1,106 @@
 {
-  "louvre-galerie-apollon": {
+  "systeme-violent": {
     "step": 1,
-    "title": "Musée du Louvre, Galerie d'Apollon",
+    "title": "systeme-violent",
+    "place": "Hôtel de Ville, site of the July 1830 barricades",
+    "lat": 48.85643,
+    "lng": 2.35253,
+    "precision": "approx",
+    "clue": "Photo taken in Grenoble; mapped to the 1830 barricades"
+  },
+  "vive-la-commune": {
+    "step": 2,
+    "title": "vive-la-commune",
+    "place": "11th arrondissement, near Père-Lachaise",
+    "lat": 48.86052,
+    "lng": 2.38842,
+    "precision": "approx",
+    "clue": "Photographer: 11th, near Père-Lachaise"
+  },
+  "louvre-galerie-apollon": {
+    "step": 8,
+    "title": "louvre-galerie-apollon",
     "place": "Louvre Museum, Apollo rotunda",
     "lat": 48.86015,
     "lng": 2.33768,
     "precision": "exact",
     "clue": "Inscription « Le Musée du Louvre… Galerie d'Apollon »"
   },
+  "dessins-faits-main": {
+    "step": 9,
+    "title": "dessins-faits-main",
+    "place": "1st arrondissement, near Châtelet",
+    "lat": 48.85752,
+    "lng": 2.34746,
+    "precision": "approx",
+    "clue": "Photographer: 1st, near Châtelet, in an artists' collective"
+  },
+  "le-parisien": {
+    "step": 10,
+    "title": "le-parisien",
+    "place": "15th arrondissement, off rue de la Convention",
+    "lat": 48.83574,
+    "lng": 2.3016,
+    "precision": "approx",
+    "clue": "Photographer: 15th, off rue de la Convention"
+  },
   "big-black-cook": {
-    "step": 2,
-    "title": "Big Black Cook",
-    "place": "5 rue Tiquetonne",
-    "lat": 48.86433,
-    "lng": 2.34976,
-    "precision": "exact",
-    "clue": "Enseigne du restaurant (adresse OpenStreetMap)"
+    "step": 11,
+    "title": "big-black-cook",
+    "place": "3rd arrondissement",
+    "lat": 48.86287,
+    "lng": 2.36,
+    "precision": "approx",
+    "clue": "Photographer: 3rd arrondissement (no street given)"
+  },
+  "deblock-metro": {
+    "step": 12,
+    "title": "deblock-metro",
+    "place": "Métro La Motte-Picquet–Grenelle",
+    "lat": 48.8491,
+    "lng": 2.29817,
+    "precision": "approx",
+    "clue": "Photographer: La Motte-Picquet"
+  },
+  "le-diable-noir": {
+    "step": 13,
+    "title": "le-diable-noir",
+    "place": "7th arrondissement, off rue de Grenelle",
+    "lat": 48.85684,
+    "lng": 2.31994,
+    "precision": "approx",
+    "clue": "Photographer: 7th, off rue de Grenelle"
   },
   "stendhal-rodin": {
-    "step": 3,
-    "title": "Médaillon de Stendhal par Rodin",
+    "step": 14,
+    "title": "stendhal-rodin",
     "place": "Jardin du Luxembourg",
     "lat": 48.8478,
     "lng": 2.3329,
     "precision": "approx",
     "clue": "Plaque « Stendhal, Auguste Rodin » — œuvre du Jardin du Luxembourg"
   },
+  "graffitis-zero": {
+    "step": 15,
+    "title": "graffitis-zero",
+    "place": "Jardin du Luxembourg, in the public toilets",
+    "lat": 48.84672,
+    "lng": 2.33641,
+    "precision": "approx",
+    "clue": "Photographer: toilets of the Jardin du Luxembourg"
+  },
+  "parc-de-l-etrange": {
+    "step": 20,
+    "title": "parc-de-l-etrange",
+    "place": "Parc André-Citroën",
+    "lat": 48.84119,
+    "lng": 2.27454,
+    "precision": "approx",
+    "clue": "Photographer: Parc André-Citroën"
+  },
   "monument-aux-morts-15e": {
-    "step": 5,
-    "title": "Monument aux morts du XVe",
+    "step": 21,
+    "title": "monument-aux-morts-15e",
     "place": "15th arrondissement town hall, rue Péclet",
     "lat": 48.8411,
     "lng": 2.3001,
@@ -36,72 +108,12 @@
     "clue": "Inscription « Paris XVe » sur le monument"
   },
   "2cv-007": {
-    "step": 6,
-    "title": "La 2CV de James Bond",
+    "step": 22,
+    "title": "2cv-007",
     "place": "Parc André Citroën",
     "lat": 48.8412,
     "lng": 2.2745,
     "precision": "approx",
     "clue": "Exposition de 2CV Citroën, pelouses et haies du parc"
-  },
-  "gospel-dream": {
-    "step": 4,
-    "title": "Gospel Dream",
-    "place": "Near Saint-Louis-d'Antin, rue du Havre",
-    "lat": 48.87451,
-    "lng": 2.32803,
-    "precision": "approx",
-    "clue": "Affiche du concert à l'Église Saint-Louis-d'Antin, 4 rue du Havre"
-  },
-  "affiches-pcr": {
-    "title": "Tu es communiste ?"
-  },
-  "le-parisien": {
-    "title": "Le Parisien, mercredi 17 juin"
-  },
-  "le-diable-noir": {
-    "title": "Le Diable noir, en vitrine"
-  },
-  "autocollant-revolution": {
-    "title": "Rejoins-nous !"
-  },
-  "dessins-faits-main": {
-    "title": "Handmade drawings, 25 €"
-  },
-  "abribus-burger-king": {
-    "title": "Un ovni parmi les desserts"
-  },
-  "une-solution-revolution": {
-    "title": "Une solution : révolution",
-    "clue": "Même façade rose que « Nike la police » — peut-être hors Paris"
-  },
-  "systeme-violent": {
-    "title": "C'est votre système qui est violent"
-  },
-  "rue-du-palais": {
-    "title": "Rue du Palais",
-    "clue": "Le blason de la plaque ressemble à celui de Grenoble — à vérifier"
-  },
-  "vive-la-commune": {
-    "title": "Vive la Commune"
-  },
-  "deblock-metro": {
-    "title": "Own your money, dans le métro"
-  },
-  "forza-napoli": {
-    "title": "Forza Napoli"
-  },
-  "graffitis-zero": {
-    "title": "Zéro"
-  },
-  "parc-de-l-etrange": {
-    "title": "Le Parc de l'Étrange"
-  },
-  "feu-vert": {
-    "title": "Feu vert"
-  },
-  "nike-la-police": {
-    "title": "Façade rose",
-    "clue": "Architecture qui ne ressemble pas à Paris — à vérifier"
   }
 }

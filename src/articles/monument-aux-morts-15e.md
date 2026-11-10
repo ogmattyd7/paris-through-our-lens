@@ -1,5 +1,5 @@
 ---
-title: War memorial of the 15th
+title: À nos morts
 author: 
 ---
 

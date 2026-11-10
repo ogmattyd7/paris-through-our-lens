@@ -22,6 +22,7 @@ await fs.mkdir(path.join(ROOT, 'public/art'), { recursive: true });
 
 for (const [id, ch] of Object.entries(data.chapters)) {
   const art = ch.art;
+  if (!art.commons && !art.image) continue;
   const out = path.join(ROOT, 'public/art', `${id}-1600.webp`);
   if (art.image && (await fs.stat(out).catch(() => null))) continue;
   const api = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({

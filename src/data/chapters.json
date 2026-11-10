@@ -1,12 +1,16 @@
 {
   "order": [
-    "autocollant-revolution",
+    "systeme-violent",
     "vive-la-commune",
+    "autocollant-revolution",
+    "affiches-pcr",
+    "rue-du-palais",
+    "une-solution-revolution",
+    "nike-la-police",
     "louvre-galerie-apollon",
     "dessins-faits-main",
     "le-parisien",
     "big-black-cook",
-    "systeme-violent",
     "deblock-metro",
     "le-diable-noir",
     "stendhal-rodin",
@@ -15,254 +19,55 @@
     "abribus-burger-king",
     "feu-vert",
     "gospel-dream",
-    "affiches-pcr",
     "parc-de-l-etrange",
     "monument-aux-morts-15e",
-    "2cv-007",
-    "rue-du-palais",
-    "une-solution-revolution",
-    "nike-la-police"
+    "2cv-007"
   ],
   "legs": {},
   "chapters": {
-    "2cv-007": {
-      "era": "1929",
-      "tone": "past",
-      "text": [
-        "A yellow Citroën 2CV parked on the grass, with “007” on the door and fake bullet holes.",
-        "It is a copy of the car James Bond drives in For Your Eyes Only (1981). People walk past; another vintage car is in the background.",
-        "A small, slow car that became a film legend."
-      ],
-      "note": "The 2CV was built from 1948 to 1990, a car designed to carry farmers and their eggs across a ploughed field.",
-      "art": {
-        "commons": "Usines Citroën, quai de Javel - btv1b532138417.jpg",
-        "caption": "Agence Rol, Citroën works, Quai de Javel, 1929",
-        "image": "2cv-007-1600.webp",
-        "mid": "2cv-007-900.webp",
-        "width": 1920,
-        "height": 1385,
-        "color": "rgb(40, 40, 40)",
-        "credit": "Agence Rol. Agence photographique (commanditaire)",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Usines_Citro%C3%ABn,_quai_de_Javel_-_btv1b532138417.jpg"
-      },
-      "when": "Background · 1929",
-      "scene": [
-        "This park is named after André Citroën because his car factory stood here, at the quai de Javel, from 1919 until 1975.",
-        "The background photo shows the factory in 1929. The park opened on the same site in 1992."
-      ],
-      "approach": "Last walk: down to the Seine and the Parc André-Citroën."
-    },
-    "monument-aux-morts-15e": {
-      "era": "1919",
-      "tone": "past",
-      "text": [
-        "A large white stone monument behind a green railing.",
-        "Sculpted figures stand on steps on each side: soldiers and families. A standing figure in the middle stretches out its arm.",
-        "This is the war memorial of the 15th arrondissement, near its town hall."
-      ],
-      "note": "Each 11 November, ceremonies are held at memorials like this one.",
-      "art": {
-        "commons": "Maréchal Ferdinand Foch saluant du bâton, à cheval, 14 juillet 1919.jpg",
-        "caption": "Marshal Foch at the Victory Parade, 14 July 1919",
-        "image": "monument-aux-morts-15e-1600.webp",
-        "mid": "monument-aux-morts-15e-900.webp",
-        "width": 1920,
-        "height": 1393,
-        "color": "rgb(8, 8, 8)",
-        "credit": "Agence de presse Meurisse",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Mar%C3%A9chal_Ferdinand_Foch_saluant_du_b%C3%A2ton,_%C3%A0_cheval,_14_juillet_1919.jpg"
-      },
-      "when": "Background · 1919",
-      "scene": [
-        "After the First World War, almost every town in France built a memorial. About 1.4 million French soldiers had died.",
-        "The background photo shows the Victory Parade on 14 July 1919, when the army marched through Paris after the war."
-      ],
-      "approach": "We walk south-west into the 15th arrondissement, to the town hall."
-    },
-    "stendhal-rodin": {
+    "systeme-violent": {
       "era": "1830",
       "tone": "past",
+      "place": "Hôtel de Ville · the barricades of July 1830",
+      "when": "The barricade · 1588 → 1968",
       "text": [
-        "A tall stone monument in the Luxembourg garden, surrounded by trees and grass.",
-        "At the top, a round bronze portrait of the writer Stendhal. Green streaks run down the stone below it: that is the bronze slowly oxidising in the rain.",
-        "The little sign in front explains that the medallion was made by Auguste Rodin, from a drawing by the sculptor David d'Angers."
+        "« C'est votre système qui est violent, pas les lycéen·nes ! » — “It's your system that is violent, not the high-school kids!”, taped over the tags. Underneath, sprayed: NO WAR!, between stencilled rifles.",
+        "Taken in Grenoble, after the recent wave of mass protests. The question it asks is the oldest one in Paris: who is really violent, the street or the state?"
       ],
-      "note": "The Luxembourg garden has more than a hundred statues; this one is easy to walk past.",
-      "art": {
-        "commons": "Portrait de Stendhal en 1840, 88.23.jpg",
-        "caption": "Portrait of Stendhal in 1840",
-        "image": "stendhal-rodin-1600.webp",
-        "mid": "stendhal-rodin-900.webp",
-        "width": 1920,
-        "height": 2663,
-        "color": "rgb(232, 232, 216)",
-        "credit": "Berengier, Henri (Marseille, 15–02–1881 - 1943), graveur",
-        "license": "CC0",
-        "source": "https://commons.wikimedia.org/wiki/File:Portrait_de_Stendhal_en_1840,_88.23.jpg"
-      },
-      "when": "Background · 1830",
       "scene": [
-        "Stendhal (real name Henri Beyle, 1783–1842) wrote The Red and the Black in 1830, the story of an ambitious young man from the provinces trying to make it in society.",
-        "The background is a portrait of Stendhal from 1840. Rodin, the most famous sculptor of his time, made this medallion decades later."
+        "The word is Parisian. On 12 May 1588, the Day of the Barricades, Parisians rolled barrels (barriques) packed with earth and paving stones across the streets to stop Henri III's troops.",
+        "Then it came back, again and again: the Fronde in 1648, July 1830, June 1832, February and June 1848, the Commune in 1871, the Liberation in August 1944, the night of 10 May 1968 on rue Gay-Lussac."
       ],
-      "approach": "We cross the river to the Left Bank and walk into the Jardin du Luxembourg."
-    },
-    "le-diable-noir": {
-      "era": "1794",
-      "tone": "past",
-      "place": "A bookshop window",
-      "text": [
-        "A book on display in a shop window: Le Diable noir (“The Black Devil”) by Claude Ribbe.",
-        "The cover shows a portrait of a Black officer in a French general's uniform from the 1790s, with a sword and white trousers.",
-        "The book is about General Thomas-Alexandre Dumas, a real person."
-      ],
-      "note": "Paris has a monument to him, place du Général-Catroux in the 17th arrondissement.",
-      "art": {
-        "commons": "Thomas-Alexandre Dumas.jpg",
-        "caption": "General Thomas-Alexandre Dumas",
-        "image": "le-diable-noir-1600.webp",
-        "mid": "le-diable-noir-900.webp",
-        "width": 1738,
-        "height": 2098,
-        "color": "rgb(232, 200, 168)",
-        "credit": "François Bonneville",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Thomas-Alexandre_Dumas.jpg"
-      },
-      "when": "Background · 1794",
-      "scene": [
-        "Thomas-Alexandre Dumas was born in Saint-Domingue (today's Haiti) to a French nobleman and an enslaved woman. He became a general in the French Revolutionary army, at a time when that was almost unheard of.",
-        "His enemies called him “the Black Devil”. His son was the writer Alexandre Dumas, author of The Three Musketeers. The background is a portrait of the general."
-      ],
-      "approach": "Back up in the street, a bookshop window."
-    },
-    "le-parisien": {
-      "era": "1900",
-      "tone": "past",
-      "place": "A morning paper",
-      "text": [
-        "A hand holds up the front page of Le Parisien.",
-        "The main headline: “Le moustique, ennemi public numéro 1” (“The mosquito, public enemy number one”), with a close-up of a tiger mosquito. On the side: a football story about Kylian Mbappé, a Toy Story 5 teaser, and a heatwave warning.",
-        "It is an ordinary day of news: insects, football, cinema and the weather."
-      ],
-      "note": "Le Parisien was founded in 1944, at the Liberation of Paris, as Le Parisien libéré.",
-      "art": {
-        "commons": "Le Petit Journal - Apache.jpg",
-        "caption": "Le Petit Journal, illustrated supplement, 'The Apache'",
-        "image": "le-parisien-1600.webp",
-        "mid": "le-parisien-900.webp",
-        "width": 1500,
-        "height": 2104,
-        "color": "rgb(216, 200, 168)",
-        "credit": "Unknown authorUnknown author",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Le_Petit_Journal_-_Apache.jpg"
-      },
-      "when": "Background · around 1900",
-      "scene": [
-        "Paris has always loved its daily papers. Around 1900, illustrated papers like Le Petit Journal sold about a million copies a day with dramatic colour covers.",
-        "The background is one of those covers. The style has changed, but the idea is the same: one big, scary image on the front to make you buy it."
-      ],
-      "approach": "A café table on the way. Someone is reading the morning paper."
-    },
-    "louvre-galerie-apollon": {
-      "era": "1796",
-      "tone": "past",
-      "text": [
-        "A carved stone inscription above a doorway, with “Galerie d'Apollon” written underneath.",
-        "It says, in French: “The Louvre Museum, founded on 16 September 1792 by decree of the Legislative Assembly, was opened on 10 August 1793 by decree of the National Convention.”",
-        "In other words, this is the museum's birth certificate, carved in stone right where visitors walk in."
-      ],
-      "note": "The Galerie d'Apollon itself was decorated under Louis XIV; it now holds the French crown jewels.",
-      "art": {
-        "commons": "Hubert Robert - The Grande Galerie - WGA19594.jpg",
-        "caption": "Hubert Robert, The Grand Gallery of the Louvre, c. 1795",
-        "image": "louvre-galerie-apollon-1600.webp",
-        "mid": "louvre-galerie-apollon-900.webp",
-        "width": 1276,
-        "height": 1000,
-        "color": "rgb(72, 56, 40)",
-        "credit": "Hubert Robert",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Hubert_Robert_-_The_Grande_Galerie_-_WGA19594.jpg"
-      },
-      "when": "Background · 1793",
-      "scene": [
-        "Before the Revolution the Louvre was a royal palace. In 1793 the revolutionaries opened it to everyone as a public museum, exactly one year after the fall of the monarchy.",
-        "The painter Hubert Robert worked on the new museum and painted the Grand Gallery many times. That is the painting behind this text."
-      ],
-      "approach": "We cross to the Louvre and go inside, up to the Apollo Gallery."
-    },
-    "affiches-pcr": {
-      "era": "1936",
-      "tone": "past",
-      "place": "A wall of posters",
-      "text": [
-        "Posters pasted over a grey metal shutter: the same red-and-white design repeated four times.",
-        "They say “Tu es communiste ? Rejoins-nous !” (“Are you a communist? Join us!”) with a black-and-white portrait of a bearded man and the logo “PCR”.",
-        "It is the same campaign as the sticker at the start of the walk, this time as big posters."
-      ],
-      "note": "Pasting posters this way is usually illegal, so they are quickly covered or torn off.",
-      "art": {
-        "commons": "Manifestation du Front populaire au mur des Fédérés - btv1b90282283.jpg",
-        "caption": "Popular Front demonstration at the Communards' Wall, 1936",
-        "image": "affiches-pcr-1600.webp",
-        "mid": "affiches-pcr-900.webp",
-        "width": 1920,
-        "height": 1448,
-        "color": "rgb(8, 8, 8)",
-        "credit": "Agence de presse Meurisse. Agence photographique (commanditaire)",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Manifestation_du_Front_populaire_au_mur_des_F%C3%A9d%C3%A9r%C3%A9s_-_btv1b90282283.jpg"
-      },
-      "when": "Background · 1936",
-      "scene": [
-        "Political posters have covered Paris walls for a long time. In 1936 the left-wing Popular Front won the elections and organised huge marches.",
-        "The background photo shows one of them, at the Communards' Wall in Père-Lachaise cemetery."
-      ],
-      "approach": "Further on, a shop shutter covered in posters."
-    },
-    "autocollant-revolution": {
-      "era": "1830",
-      "tone": "past",
-      "place": "A green door",
-      "text": [
-        "A red-and-white sticker on an old green door: “Tu es communiste ? Rejoins-nous ! Révolution” (“Are you a communist? Join us! Revolution”).",
-        "Someone has answered it by hand with a scribbled “Rebelle ?” on top. Part of the sticker has already been torn away.",
-        "It is a recruiting sticker for a small far-left group. The same campaign shows up again later on the walk, as full-size posters."
-      ],
-      "note": "Political stickers are the cheapest way to talk to the street: a few cents each, stuck where people walk past.",
+      "note": "",
+      "caption": "Photo taken in Grenoble · pinned where Paris fought in July 1830",
+      "barricade": true,
       "art": {
         "commons": "Eugène Delacroix - La liberté guidant le peuple.jpg",
         "caption": "Eugène Delacroix, Liberty Leading the People, 1830",
-        "image": "autocollant-revolution-1600.webp",
-        "mid": "autocollant-revolution-900.webp",
+        "image": "systeme-violent-1600.webp",
+        "mid": "systeme-violent-900.webp",
         "width": 1920,
         "height": 1520,
         "color": "rgb(8, 8, 8)",
         "credit": "Eugène Delacroix",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg"
-      },
-      "when": "Background · July 1830",
-      "scene": [
-        "“Revolution” is an old word on Paris walls. In July 1830 Parisians built barricades and forced King Charles X off the throne in three days.",
-        "Delacroix painted it the same year: Liberty Leading the People, now in the Louvre. The sticker uses the same word, almost 200 years later, on a much smaller scale."
-      ],
-      "approach": "From Point Zero we follow the quay. The first picture is on a door, at eye level."
+      }
     },
     "vive-la-commune": {
       "era": "1871",
       "tone": "past",
-      "place": "A painted wall",
+      "place": "11th arrondissement, near Père-Lachaise",
+      "when": "La Commune · 18 March – 28 May 1871",
       "text": [
-        "A tall blind wall at the end of a building, against a bright blue sky.",
-        "A huge faded drawing in black and red lines covers it: big cartoon figures and little houses. Under it, someone has written by hand: “Vive la Commune” (“Long live the Commune”). A red tag sits at the bottom.",
-        "The slogan is small compared to the wall, but it is the part that tells you what the wall is about."
+        "« Vive la Commune » — “Long live the Commune”, hand-painted at the foot of a huge blind wall.",
+        "Shot in the 11th, a few minutes from Père-Lachaise, the cemetery where the Commune made its last stand."
       ],
-      "note": "The background image is a barricade on rue de Castiglione, photographed during the Commune in 1871.",
+      "scene": [
+        "18 March 1871: Paris refuses to hand its cannons over to the government and takes the city. For 72 days it runs itself: an elected council, church separated from state, night work banned in the bakeries.",
+        "It ends in the Bloody Week, 21–28 May. On 28 May, 147 fighters are shot against a wall in Père-Lachaise, the Mur des Fédérés, where the left still marches every spring."
+      ],
+      "note": "",
       "art": {
         "commons": "La Commune 1871. Barricade rue de Castiglione, 1er arrondissement, Paris. PH20145.jpg",
         "caption": "Barricade on rue de Castiglione, Paris Commune, 1871",
@@ -274,341 +79,106 @@
         "credit": "Attribué à Braquehais, Auguste Bruno (Dieppe, 18–01–1823 - La Celle-Saint-Cloud, 1875), photographe",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:La_Commune_1871._Barricade_rue_de_Castiglione,_1er_arrondissement,_Paris._PH20145.jpg"
-      },
-      "when": "Background · Spring 1871",
-      "scene": [
-        "The Paris Commune lasted from 18 March to 28 May 1871. After the war with Prussia, Parisians took over the city and ran it themselves for 72 days.",
-        "The army crushed it during the “Bloody Week”; thousands of people were killed. “Vive la Commune” is still written on Paris walls today, as a sign of protest and memory."
-      ],
-      "approach": "Still along the river, a tall blank wall stands above the roofs."
+      }
     },
-    "systeme-violent": {
-      "era": "1834",
+    "autocollant-revolution": {
+      "era": "1920",
       "tone": "past",
-      "place": "A tagged wall",
+      "place": "A green door · exact spot not recorded",
+      "when": "Communist Paris · 1920 → 1936",
       "text": [
-        "A sheet of paper taped over graffiti: “C'est votre système qui est violent, pas les lycéen·nes !” (“It's your system that is violent, not the high-school students!”).",
-        "Below it, spray-painted in black: “NO WAR!” with stencils of rifles, and other tags.",
-        "The paper sign is neat and handwritten; the graffiti around it is messy. Two different ways of protesting on the same wall."
+        "« Tu es communiste ? Rejoins-nous ! Révolution » — “Are you a communist? Join us! Revolution”. Someone has scrawled an answer across it: « Rebelle ? », “Rebel?”",
+        "A recruiting sticker. Its full-size posters are the next stop."
       ],
-      "note": "In French protests, high-school students often march alongside university students and unions.",
-      "art": {
-        "commons": "Honoré Daumier, Rue Transnonain, le 15 avril 1834, 1834, NGA 6133.jpg",
-        "caption": "Honoré Daumier, Rue Transnonain, 15 April 1834",
-        "image": "systeme-violent-1600.webp",
-        "mid": "systeme-violent-900.webp",
-        "width": 1920,
-        "height": 1357,
-        "color": "rgb(232, 216, 200)",
-        "credit": "Honoré Daumier",
-        "license": "CC0",
-        "source": "https://commons.wikimedia.org/wiki/File:Honor%C3%A9_Daumier,_Rue_Transnonain,_le_15_avril_1834,_1834,_NGA_6133.jpg"
-      },
-      "when": "Background · 1834",
       "scene": [
-        "The slogan answers a common accusation: that young protesters are violent. It turns the question around and points at the state.",
-        "Artists made the same argument long ago. In 1834 Honoré Daumier drew Rue Transnonain, showing a family killed by soldiers in their own home in Paris. That is the background image."
+        "In December 1920, at the Congress of Tours, most French socialists voted to join Lenin's Communist International. The French Communist Party was born.",
+        "By 1936 it was a mass party. The Popular Front won the elections, the factories went on strike, and workers won paid holidays and the 40-hour week. The marches ended at the Mur des Fédérés, as in the photo behind."
       ],
-      "approach": "A few streets further, a wall covered in tags."
-    },
-    "graffitis-zero": {
-      "era": "1910",
-      "tone": "future",
-      "place": "A wall of slogans",
-      "text": [
-        "A pale wall covered in marker: a big blue “ZERO” in the middle, and many smaller messages around it.",
-        "You can read “Free Palestine”, “Free Gaza”, “Mélenchon 2027”, “Nik la police” and “Qui pour nous protéger de la police ?” (“Who will protect us from the police?”).",
-        "Nobody planned this wall. Each person added a line, and together they make a kind of public conversation."
-      ],
-      "note": "Mélenchon is a French left-wing politician; 2027 is the next presidential election.",
+      "note": "",
       "art": {
-        "commons": "Umberto boccioni, rissa in galleria, 1910, 01.jpg",
-        "caption": "Umberto Boccioni, Riot in the Galleria, 1910",
-        "image": "graffitis-zero-1600.webp",
-        "mid": "graffitis-zero-900.webp",
+        "commons": "Manifestation du Front populaire au mur des Fédérés - btv1b90282283.jpg",
+        "caption": "Popular Front demonstration at the Communards' Wall, 1936",
+        "image": "autocollant-revolution-1600.webp",
+        "mid": "autocollant-revolution-900.webp",
         "width": 1920,
-        "height": 2214,
-        "color": "rgb(40, 24, 24)",
-        "credit": "Francesco Bini",
-        "license": "CC BY-SA 4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Umberto_boccioni,_rissa_in_galleria,_1910,_01.jpg"
-      },
-      "when": "Background · 1910",
-      "scene": [
-        "Graffiti walls show what is on people's minds right now: wars abroad, the next election, the police.",
-        "The background, Boccioni's Riot in the Galleria (1910), shows a crowd in movement: many voices at once, like this wall."
-      ],
-      "approach": "On the way out of the garden, a wall full of writing."
+        "height": 1448,
+        "color": "rgb(8, 8, 8)",
+        "credit": "Agence de presse Meurisse. Agence photographique (commanditaire)",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Manifestation_du_Front_populaire_au_mur_des_F%C3%A9d%C3%A9r%C3%A9s_-_btv1b90282283.jpg"
+      }
     },
-    "big-black-cook": {
-      "era": "1895",
+    "affiches-pcr": {
+      "era": "1844",
       "tone": "past",
+      "place": "A shop shutter · exact spot not recorded",
+      "when": "Paris, capital of exiles · 1843 → 1916",
       "text": [
-        "A black shop sign on a dark façade: “Big Black Cook”, in big white letters, with a smaller pink line underneath.",
-        "It is the sign of a small restaurant at 5 rue Tiquetonne, a narrow street full of places to eat.",
-        "The picture is just the sign: simple, bold, and easy to spot from the end of the street."
+        "The same « Tu es communiste ? Rejoins-nous ! », pasted four times over a shop shutter under a bearded portrait and the letters PCR, the Parti communiste révolutionnaire.",
+        "The men who wrote the answer to that question lived in Paris."
       ],
-      "note": "This is one of the six photos we could place exactly on the map.",
-      "art": {
-        "commons": "Léon Augustin Lhermitte - Les Halles - musée des Beaux-Arts de la ville de Paris.jpg",
-        "caption": "Léon Lhermitte, Les Halles, c. 1895",
-        "image": "big-black-cook-1600.webp",
-        "mid": "big-black-cook-900.webp",
-        "width": 1920,
-        "height": 1244,
-        "color": "rgb(56, 40, 24)",
-        "credit": "Léon Augustin Lhermitte",
-        "license": "CC0",
-        "source": "https://commons.wikimedia.org/wiki/File:L%C3%A9on_Augustin_Lhermitte_-_Les_Halles_-_mus%C3%A9e_des_Beaux-Arts_de_la_ville_de_Paris.jpg"
-      },
-      "when": "Background · around 1895",
       "scene": [
-        "Rue Tiquetonne is right next to Les Halles, which for centuries was the city's huge food market. Writer Émile Zola called it “the belly of Paris”.",
-        "The background painting by Léon Lhermitte shows the market around 1895. The market moved out of Paris in 1969, but the neighbourhood is still all about food."
+        "Karl Marx lived here from 1843 to 1845, on rue Vaneau in the 7th. In August 1844 he met Friedrich Engels at the Café de la Régence, and their partnership began. France expelled him in early 1845.",
+        "Lenin lived here from 1908 to 1912, at 4 rue Marie-Rose in the 14th. Trotsky wrote for the anti-war paper Nashe Slovo from 1914 until France expelled him in 1916.",
+        "In July 1889, for the centenary of 1789, socialists meeting in Paris founded the Second International and made 1 May the day of workers' demonstrations. In April 1905, at the Salle du Globe, the French socialists united as the SFIO."
       ],
-      "approach": "We head north into the 2nd arrondissement, towards Les Halles and rue Tiquetonne."
-    },
-    "forza-napoli": {
-      "era": "1880",
-      "tone": "past",
-      "place": "A trattoria",
-      "text": [
-        "The front of a small Italian restaurant. Above the door, a blue banner: “Forza Napoli”, the chant of the Naples football club.",
-        "The windows are covered in photos of players and the club's blue colours. Inside, people are eating; outside, a woman is on her phone next to a scooter.",
-        "A little piece of Naples in a Paris street."
-      ],
-      "note": "Napoli fans are known for their devotion to Diego Maradona, who played for the club in the 1980s.",
+      "note": "",
       "art": {
-        "commons": "Béraud - Le boulevard des Capucines, le soir, devant le Café Napolitain, Vers 1880.jpg",
-        "caption": "Jean Béraud, In Front of the Café Napolitain, c. 1880",
-        "image": "forza-napoli-1600.webp",
-        "mid": "forza-napoli-900.webp",
-        "width": 1920,
-        "height": 1493,
-        "color": "rgb(24, 24, 24)",
-        "credit": "Jean Béraud",
+        "commons": "Karl Marx by John Jabez Edwin Mayall 1875 - Restored.png",
+        "caption": "John Mayall, Karl Marx, 1875",
+        "image": "affiches-pcr-1600.webp",
+        "mid": "affiches-pcr-900.webp",
+        "width": 865,
+        "height": 1280,
+        "color": "rgb(72, 72, 72)",
+        "credit": "John Jabez Edwin Mayall",
         "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:B%C3%A9raud_-_Le_boulevard_des_Capucines,_le_soir,_devant_le_Caf%C3%A9_Napolitain,_Vers_1880.jpg"
-      },
-      "when": "Background · around 1880",
-      "scene": [
-        "Italian immigrants have lived in Paris since the 19th century, and they brought their cafés and food with them.",
-        "The background painting by Jean Béraud shows the Café Napolitain on the boulevards around 1880, already a famous meeting place."
-      ],
-      "approach": "Further on, a small restaurant with blue flags."
-    },
-    "dessins-faits-main": {
-      "era": "1910",
-      "tone": "future",
-      "place": "A stall of drawings",
-      "text": [
-        "A stall with a handwritten sign: “Handmade drawings 25€”.",
-        "One drawing, in black ink, is captioned “Kill the past, embrace the future”. A man points a pistol away while kissing a woman; another woman sits at a table with a glass and a cake, ignoring them.",
-        "It is a funny, dramatic scene, sold by the artist on the street for the price of a lunch."
-      ],
-      "note": "Funny detail: we have just left the Louvre, the museum the Futurists wanted to burn.",
-      "art": {
-        "commons": "The City Rises by Umberto Boccioni 1910.jpg",
-        "caption": "Umberto Boccioni, The City Rises, 1910",
-        "image": "dessins-faits-main-1600.webp",
-        "mid": "dessins-faits-main-900.webp",
-        "width": 1920,
-        "height": 1275,
-        "color": "rgb(216, 200, 184)",
-        "credit": "Umberto Boccioni",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:The_City_Rises_by_Umberto_Boccioni_1910.jpg"
-      },
-      "when": "Background · 1909",
-      "scene": [
-        "“Kill the past” is almost word for word what the Italian Futurists said. Their manifesto was published on the front page of Le Figaro, in Paris, in 1909: burn the museums, love speed and machines.",
-        "The background is a Futurist painting by Umberto Boccioni, The City Rises (1910)."
-      ],
-      "approach": "Back outside, near the river, someone is selling drawings."
-    },
-    "abribus-burger-king": {
-      "era": "1890",
-      "tone": "modern",
-      "place": "A bus shelter",
-      "text": [
-        "A bus-shelter poster for Burger King, in a JCDecaux frame.",
-        "It shows an “Ice Burger”: ice cream between two bun halves, with chocolate on top. The slogan: “Un ovni parmi les desserts” (“A UFO among desserts”).",
-        "A burger that is actually a dessert: the ad is built to make you look twice."
-      ],
-      "note": "JCDecaux invented the advertising-funded bus shelter in 1964, in Lyon.",
-      "art": {
-        "commons": "Apéritif Mugnier affiche, Jules Chéret 90.jpg",
-        "caption": "Jules Chéret, poster for Apéritif Mugnier",
-        "image": "abribus-burger-king-1600.webp",
-        "mid": "abribus-burger-king-900.webp",
-        "width": 1920,
-        "height": 2531,
-        "color": "rgb(216, 184, 152)",
-        "credit": "Chéret, Jules (1836-1932). Illustrateur",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Ap%C3%A9ritif_Mugnier_affiche,_Jules_Ch%C3%A9ret_90.jpg"
-      },
-      "when": "Background · 1890s",
-      "scene": [
-        "Street posters became an art in Paris in the 1890s. Jules Chéret printed bright, colourful posters for drinks, theatres and cafés; people collected them.",
-        "The background is one of Chéret's posters, for an apéritif. Same idea as the Burger King ad: bright colours and one product."
-      ],
-      "approach": "We wait at a bus stop for a moment."
-    },
-    "deblock-metro": {
-      "era": "1914",
-      "tone": "future",
-      "place": "A métro corridor",
-      "text": [
-        "A big advertising poster in a métro station, on the classic white tiles.",
-        "It is for Deblock, a finance app: “Le compte courant pour vos euros, bitcoins et stablecoins” (“The current account for your euros, bitcoins and stablecoins”). The bank card says “Own your money”, in the style of a video game logo.",
-        "A very modern ad, in a station design that has barely changed in a hundred years."
-      ],
-      "note": "The first métro line opened in 1900, for the Universal Exhibition.",
-      "art": {
-        "commons": "Robert Delaunay, Hommage à Blériot, 1914.jpg",
-        "caption": "Robert Delaunay, Homage to Blériot, 1914",
-        "image": "deblock-metro-1600.webp",
-        "mid": "deblock-metro-900.webp",
-        "width": 1920,
-        "height": 1903,
-        "color": "rgb(56, 72, 120)",
-        "credit": "Robert Delaunay",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Robert_Delaunay,_Hommage_%C3%A0_Bl%C3%A9riot,_1914.jpg"
-      },
-      "when": "Background · 1914",
-      "scene": [
-        "The métro opened in 1900 and quickly became a place for posters. Each new technology has promised to change everyday life: then electricity and aeroplanes, now crypto.",
-        "The background is Robert Delaunay's Homage to Blériot (1914), painted for the pilot who first flew across the Channel."
-      ],
-      "approach": "We go down into the métro. White tiles, a long corridor."
-    },
-    "feu-vert": {
-      "era": "1877",
-      "tone": "past",
-      "place": "A Haussmann crossroads",
-      "text": [
-        "A busy street corner. The pedestrian light is green, and people are crossing.",
-        "Around them: tall cream-coloured buildings with iron balconies, a scooter, cafés at street level.",
-        "Nothing special happens in this picture, and that is the point: it is everyday Paris."
-      ],
-      "note": "Haussmann's works destroyed a large part of medieval Paris to build the city we know today.",
-      "art": {
-        "commons": "Gustave Caillebotte - Paris Street; Rainy Day - Google Art Project.jpg",
-        "caption": "Gustave Caillebotte, Paris Street; Rainy Day, 1877",
-        "image": "feu-vert-1600.webp",
-        "mid": "feu-vert-900.webp",
-        "width": 1920,
-        "height": 1454,
-        "color": "rgb(200, 200, 184)",
-        "credit": "Gustave Caillebotte",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg"
-      },
-      "when": "Background · 1877",
-      "scene": [
-        "These buildings are typical of Baron Haussmann, who rebuilt Paris between 1853 and 1870 with wide avenues and matching façades.",
-        "Gustave Caillebotte painted people crossing one of these new streets in 1877: Paris Street; Rainy Day, the background image. It looks almost like this photo, 150 years earlier."
-      ],
-      "approach": "We cross a big Paris crossroads."
-    },
-    "parc-de-l-etrange": {
-      "era": "1861",
-      "tone": "past",
-      "place": "A gate, on an October evening",
-      "text": [
-        "A black banner on a fence in front of tall trees: “Le Parc de l'Étrange”, in red letters (“The Park of the Strange”).",
-        "The smaller line says: “L'événement immersif d'Halloween” (“The immersive Halloween event”).",
-        "A haunted park for one month a year, set up like a theme park."
-      ],
-      "note": "The Catacombs are open to visitors and are one of the most visited places in Paris.",
-      "art": {
-        "commons": "Nadar - Catacombes de Paris - NPS 74.jpg",
-        "caption": "Nadar, Catacombs of Paris, 1861–1862",
-        "image": "parc-de-l-etrange-1600.webp",
-        "mid": "parc-de-l-etrange-900.webp",
-        "width": 1920,
-        "height": 2591,
-        "color": "rgb(248, 248, 248)",
-        "credit": "Nadar",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Nadar_-_Catacombes_de_Paris_-_NPS_74.jpg"
-      },
-      "when": "Background · 1861",
-      "scene": [
-        "Paris has always liked to scare itself. Under the city lie the Catacombs, old quarries filled with the bones of millions of Parisians.",
-        "The background is one of the first photos taken underground, by Nadar in 1861, using electric light."
-      ],
-      "approach": "In the evening we reach a park gate with a black banner."
-    },
-    "gospel-dream": {
-      "era": "1926",
-      "tone": "past",
-      "text": [
-        "A purple concert poster: “Gospel Dream — chants authentiques de l'église afro-américaine” (“authentic songs of the African-American church”).",
-        "It shows a choir in purple robes inside a church. The concert is at the Église Saint-Louis-d'Antin, on Friday 1 May at 8:30 pm.",
-        "We placed it near that church, since the poster probably hangs in the area."
-      ],
-      "note": "Saint-Louis-d'Antin was built in the 1780s as the chapel of a convent.",
-      "art": {
-        "commons": "Joséphine Baker - photo Waléry.jpg",
-        "caption": "Waléry, Josephine Baker, c. 1926",
-        "image": "gospel-dream-1600.webp",
-        "mid": "gospel-dream-900.webp",
-        "width": 1920,
-        "height": 2863,
-        "color": "rgb(72, 72, 56)",
-        "credit": "Lucien Waléry",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9phine_Baker_-_photo_Wal%C3%A9ry.jpg"
-      },
-      "when": "Background · 1920s",
-      "scene": [
-        "African-American music has a long history in Paris. In the 1920s jazz arrived, and Josephine Baker became a star of the Paris stage. She is in the background photo.",
-        "Today, gospel concerts in Paris churches are a way to hear that tradition live."
-      ],
-      "approach": "We walk north towards Saint-Lazare, into the 9th arrondissement."
+        "source": "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png"
+      }
     },
     "rue-du-palais": {
-      "era": "1788",
+      "era": "1831",
       "tone": "past",
-      "place": "Beyond the walls — probably Grenoble",
+      "place": "Grenoble",
+      "when": "Mocking the king · 1831 → 1834",
       "text": [
-        "A street sign: “Rue du Palais”, with a small coat of arms, on the corner of a stone building.",
-        "Below it, graffiti in pencil-thin letters: “Macron castration”, and a tag.",
-        "The coat of arms and the orange building in the back look like Grenoble rather than Paris."
+        "Pencilled under a Rue du Palais sign: « Macron castration ». Crude, personal, aimed at the body of the man in power.",
+        "Taken in Grenoble. Going after the ruler's body is a Paris tradition."
       ],
-      "note": "We are not sure where this photo was taken. The original file with its GPS would tell us.",
+      "scene": [
+        "In 1831 Charles Philipon, on trial in Paris for insulting King Louis-Philippe, sketched the royal face melting into a pear. La poire became the regime's nickname, drawn on walls all over the city.",
+        "Honoré Daumier went further: in Gargantua he drew the king as a giant swallowing the taxes of the poor. It earned him six months in prison."
+      ],
+      "note": "",
+      "outside": true,
       "art": {
-        "commons": "Journée des Tuiles (Alexandre Debelle), Musée de la Révolution française - Vizille.jpg",
-        "caption": "Alexandre Debelle, The Day of the Tiles, 1889",
+        "commons": "Honoré Daumier - Gargantua.jpg",
+        "caption": "Honoré Daumier, Gargantua, 1831",
         "image": "rue-du-palais-1600.webp",
         "mid": "rue-du-palais-900.webp",
-        "width": 1094,
-        "height": 836,
-        "color": "rgb(104, 88, 56)",
-        "credit": "Alexandre Debelle",
-        "license": "CC BY-SA 4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Journ%C3%A9e_des_Tuiles_(Alexandre_Debelle),_Mus%C3%A9e_de_la_R%C3%A9volution_fran%C3%A7aise_-_Vizille.jpg"
-      },
-      "when": "Background · 1788",
-      "scene": [
-        "If this is Grenoble, rue du Palais is named after the old Parliament building. In June 1788, people there threw roof tiles at the king's soldiers: the “Day of the Tiles”.",
-        "Many historians see it as one of the first sparks of the French Revolution. That event is in the background painting."
-      ],
-      "approach": "We leave Paris for the last three pictures."
+        "width": 1920,
+        "height": 1437,
+        "color": "rgb(248, 248, 248)",
+        "credit": "Honoré Daumier",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Honor%C3%A9_Daumier_-_Gargantua.jpg"
+      }
     },
     "une-solution-revolution": {
       "era": "1789",
       "tone": "past",
-      "place": "Beyond the walls — a pink façade",
+      "place": "Grenoble",
+      "when": "14 July 1789",
       "text": [
-        "A pink building on a quiet street, with a parked car and someone sitting by the door.",
-        "On the wall, in black spray paint: “Une solution : révolution” (“One solution: revolution”).",
-        "Same word as at the very start of the walk, now on a completely different wall."
+        "« Une solution : révolution » — “One solution: revolution”, sprayed on a pink wall.",
+        "Taken in Grenoble. The rhyme works because everyone knows which revolution comes first."
       ],
-      "note": "This photo does not seem to have been taken in Paris.",
+      "scene": [
+        "On 14 July 1789 Parisians stormed the Bastille for its gunpowder. Within weeks the feudal privileges were abolished and the Declaration of the Rights of Man was voted.",
+        "Every Paris uprising since has called itself a revolution or a sequel to one: 1830, 1848, 1871. The word on the wall carries all of them."
+      ],
+      "note": "",
+      "outside": true,
       "art": {
         "commons": "Prise de la Bastille clean.jpg",
         "caption": "Jean-Pierre Houël, The Storming of the Bastille, 1789",
@@ -620,42 +190,431 @@
         "credit": "Jean-Pierre Houël",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Prise_de_la_Bastille_clean.jpg"
-      },
-      "when": "Background · 1789",
-      "scene": [
-        "“Revolution” in France always points back to 1789 and the storming of the Bastille, shown in the background painting.",
-        "Graffiti like this uses that history as a shortcut: one word, and everybody knows what it means."
-      ],
-      "approach": "Another city, another wall."
+      }
     },
     "nike-la-police": {
-      "era": "1896",
+      "era": "1968",
       "tone": "past",
-      "place": "Beyond the walls — a pink wall",
+      "place": "Grenoble",
+      "when": "May 1968 → now",
       "text": [
-        "A pink wall with black graffiti: “Nike la police”.",
-        "It is a play on words: “Nique la police” is a rude slogan against the police (“Screw the police”), here spelled like the sportswear brand Nike.",
-        "Brand names and protest mixed together, which is how a lot of street language works today."
+        "« Nike la police »: « Nique la police », “Fuck the police”, spelled like the American sportswear brand.",
+        "Taken in Grenoble. Rage and logo in a single word."
       ],
-      "note": "This photo also does not seem to have been taken in Paris.",
+      "scene": [
+        "Paris has shouted at its police for a long time. In May 1968, after the riot police cleared the Sorbonne, the walls answered: « CRS = SS ».",
+        "In 2005, and again in June 2023, the deaths of teenagers during police encounters set off nights of rioting around Paris."
+      ],
+      "note": "",
+      "outside": true,
       "art": {
-        "commons": "Affiches Charles Verneau. \"La Rue \" - affiche - Steinlen 96 - btv1b9011731v.jpg",
-        "caption": "Théophile Alexandre Steinlen, The Street, 1896",
+        "commons": "Honoré Daumier, Rue Transnonain, le 15 avril 1834, 1834, NGA 6133.jpg",
+        "caption": "Honoré Daumier, Rue Transnonain, 15 April 1834",
         "image": "nike-la-police-1600.webp",
         "mid": "nike-la-police-900.webp",
         "width": 1920,
-        "height": 1516,
-        "color": "rgb(40, 40, 40)",
-        "credit": "Steinlen, Théophile Alexandre (1859-1923). Illustrateur",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Affiches_Charles_Verneau._%22La_Rue_%22_-_affiche_-_Steinlen_96_-_btv1b9011731v.jpg"
-      },
-      "when": "Background · 1896",
-      "scene": [
-        "Théophile Steinlen drew the streets of Paris in the 1890s: workers, children, cats, posters. His big poster “The Street” is the background.",
-        "The street has always been where people show what they think, with drawings, posters, or a can of spray paint."
+        "height": 1357,
+        "color": "rgb(232, 216, 200)",
+        "credit": "Honoré Daumier",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Honor%C3%A9_Daumier,_Rue_Transnonain,_le_15_avril_1834,_1834,_NGA_6133.jpg"
+      }
+    },
+    "louvre-galerie-apollon": {
+      "era": "1793",
+      "tone": "past",
+      "place": "Louvre Museum, door of the Galerie d'Apollon",
+      "when": "1793 → 2025",
+      "text": [
+        "Carved over the door: “The Louvre Museum, founded on 16 September 1792 by decree of the Legislative Assembly, was opened on 10 August 1793 by decree of the National Convention.”",
+        "A royal palace turned public museum, one year to the day after the monarchy fell."
       ],
-      "approach": "The last picture."
+      "scene": [
+        "Behind this door: the French crown jewels.",
+        "On 19 October 2025, in broad daylight, thieves raised a furniture lift to a window of the Galerie d'Apollon and left with eight pieces of 19th-century crown jewellery in a few minutes. The Revolution opened the palace to everyone; the heist reminded everyone what is inside."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Hubert Robert - The Grande Galerie - WGA19594.jpg",
+        "caption": "Hubert Robert, The Grand Gallery of the Louvre, c. 1795",
+        "image": "louvre-galerie-apollon-1600.webp",
+        "mid": "louvre-galerie-apollon-900.webp",
+        "width": 1276,
+        "height": 1000,
+        "color": "rgb(72, 56, 40)",
+        "credit": "Hubert Robert",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Hubert_Robert_-_The_Grande_Galerie_-_WGA19594.jpg"
+      }
+    },
+    "dessins-faits-main": {
+      "era": "1909",
+      "tone": "future",
+      "place": "1st arrondissement, near Châtelet · an artists' collective",
+      "when": "Futurism · 1909",
+      "text": [
+        "“Handmade drawings 25€”. One is captioned « Kill the past, embrace the future »: a man fires a pistol while kissing a woman, while another woman ignores them over cake.",
+        "Sold in an artists' collective near Châtelet, a short walk from the Louvre."
+      ],
+      "scene": [
+        "“Kill the past” is the Futurist programme. On 20 February 1909 Filippo Tommaso Marinetti published the Futurist Manifesto on the front page of Le Figaro, in Paris: set fire to the libraries, flood the museums, worship speed.",
+        "Paris printed it, then ignored the advice. The Louvre is still standing next door."
+      ],
+      "note": "",
+      "art": {
+        "commons": "The City Rises by Umberto Boccioni 1910.jpg",
+        "caption": "Umberto Boccioni, The City Rises, 1910",
+        "image": "dessins-faits-main-1600.webp",
+        "mid": "dessins-faits-main-900.webp",
+        "width": 1920,
+        "height": 1275,
+        "color": "rgb(216, 200, 184)",
+        "credit": "Umberto Boccioni",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:The_City_Rises_by_Umberto_Boccioni_1910.jpg"
+      }
+    },
+    "le-parisien": {
+      "era": "2004",
+      "tone": "modern",
+      "place": "15th arrondissement, off rue de la Convention",
+      "when": "Aedes albopictus · 2004 → now",
+      "text": [
+        "« Le moustique, ennemi public numéro 1 » — “The mosquito, public enemy number one”, across Le Parisien's front page, under a giant tiger mosquito.",
+        "The new public enemy is a few millimetres long, black with white stripes, and bites in broad daylight."
+      ],
+      "scene": [
+        "The tiger mosquito was first found in mainland France in 2004, near Menton. It travels with us, in tyres, plant pots and car boots, and has since colonised Paris and the whole Île-de-France.",
+        "It can carry dengue, chikungunya and Zika, and Île-de-France has now recorded its first locally transmitted dengue cases. The tropics have arrived by commuter train."
+      ],
+      "note": "« Ennemi public numéro un » is borrowed from 1930s America; France gave the title to the gangster Jacques Mesrine. Now it goes to an insect.",
+      "art": {
+        "commons": "CDC-Gathany-Aedes-albopictus-1.jpg",
+        "caption": "James Gathany (CDC), tiger mosquito, Aedes albopictus",
+        "image": "le-parisien-1600.webp",
+        "mid": "le-parisien-900.webp",
+        "width": 1920,
+        "height": 1272,
+        "color": "rgb(72, 88, 40)",
+        "credit": "James Gathany, CDC",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:CDC-Gathany-Aedes-albopictus-1.jpg"
+      }
+    },
+    "big-black-cook": {
+      "era": "Now",
+      "tone": "modern",
+      "place": "3rd arrondissement",
+      "when": "Caribbean Paris · 1963 → now",
+      "text": [
+        "BIG BLACK COOK. Read it out loud. Now read it again, slower. Yes. They meant it.",
+        "A Black Caribbean restaurant in the 3rd that puts a dick joke on its sign has nothing to prove about its food."
+      ],
+      "scene": [
+        "From 1963 to 1981 a state agency, the BUMIDOM, moved tens of thousands of people from Guadeloupe, Martinique, French Guiana and Réunion to mainland France, many into Paris jobs in hospitals, the post office and transport.",
+        "Their kitchens came with them. Accras, colombo and ti-punch are Paris classics now, and every summer the Tropical Carnival takes over the streets."
+      ],
+      "note": "",
+      "caption": "In the 3rd · exact address not recorded",
+      "art": {
+        "caption": ""
+      }
+    },
+    "deblock-metro": {
+      "era": "Now",
+      "tone": "future",
+      "place": "Métro La Motte-Picquet–Grenelle",
+      "when": "Old money / new money",
+      "text": [
+        "Down in La Motte-Picquet–Grenelle: a purple card yelling « Own your money » in Grand Theft Auto lettering, for “the current account for your euros, bitcoins and stablecoins”.",
+        "Crypto sold like a heist game, on the same bevelled white tiles the métro has used since 1900."
+      ],
+      "scene": [
+        "Upstairs is the old money: the Palais Brongniart, the stock exchange commissioned by Napoleon, and Avenue Montaigne, where the couture houses sell handbags priced like small cars.",
+        "Down here, the new pitch: be your own bank, hold your own coins, play money like a game. GTA gave you a city to rob. This ad sells you a way around the bank."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Bourse de Paris, 3-4-1910 (Paris, 2e arrondissement) - btv1b6913935c.jpg",
+        "caption": "Agence Rol, the Paris Bourse, 3 April 1910",
+        "image": "deblock-metro-1600.webp",
+        "mid": "deblock-metro-900.webp",
+        "width": 1920,
+        "height": 1403,
+        "color": "rgb(248, 248, 248)",
+        "credit": "Agence Rol. Agence photographique (commanditaire)",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Bourse_de_Paris,_3-4-1910_(Paris,_2e_arrondissement)_-_btv1b6913935c.jpg"
+      }
+    },
+    "le-diable-noir": {
+      "era": "1793",
+      "tone": "past",
+      "place": "7th arrondissement, off rue de Grenelle",
+      "when": "A Black general · 1786 → now",
+      "text": [
+        "In a bookshop window: Claude Ribbe's « Le Diable noir », “The Black Devil”, with General Thomas-Alexandre Dumas in full uniform on the cover.",
+        "Seen off rue de Grenelle, in the 7th, the district of ministries, the Invalides and the École militaire."
+      ],
+      "scene": [
+        "Born in Saint-Domingue to a French nobleman and an enslaved woman, Dumas enlisted as a private in 1786. By 1793 he was a general commanding an army. Only a revolution could promote a Black man that fast.",
+        "Then France turned back. Bonaparte sidelined him after Egypt and restored slavery in 1802. Dumas died poor in 1806.",
+        "Paris carried the line on. His son became the most-read novelist in France. Gaston Monnerville, born in Cayenne, presided over the upper house from 1947 to 1968. Félix Éboué entered the Panthéon in 1949, Alexandre Dumas in 2002."
+      ],
+      "note": "The general's statue on place Malesherbes was melted down during the Occupation. Today a pair of giant broken shackles stands in its place.",
+      "art": {
+        "commons": "Thomas-Alexandre Dumas.jpg",
+        "caption": "General Thomas-Alexandre Dumas",
+        "image": "le-diable-noir-1600.webp",
+        "mid": "le-diable-noir-900.webp",
+        "width": 1738,
+        "height": 2098,
+        "color": "rgb(232, 200, 168)",
+        "credit": "François Bonneville",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Thomas-Alexandre_Dumas.jpg"
+      }
+    },
+    "stendhal-rodin": {
+      "era": "1842",
+      "tone": "past",
+      "place": "Jardin du Luxembourg",
+      "when": "Read in 1880, read in 1935",
+      "text": [
+        "A bronze medallion of Stendhal on a stone column in the Luxembourg garden; the plaque credits Auguste Rodin, after David d'Angers. Green streaks run down the stone where the bronze weeps in the rain."
+      ],
+      "scene": [
+        "Paris writers worked on foot. Walking was how they gathered faces, rumours and impressions; Baudelaire made the flâneur a hero of modern life, and Walter Benjamin made him a theory.",
+        "Stendhal knew his own generation would not read him. The Red and the Black and The Charterhouse of Parma sold poorly; Balzac was nearly alone in praising him. He wrote that he would be understood around 1880, and that he held a lottery ticket whose prize was to be read in 1935.",
+        "He collapsed on a Paris street in 1842 and died the next day, almost unknown. Both dates came true. Every artist in this city makes the same bet."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Portrait de Stendhal en 1840, 88.23.jpg",
+        "caption": "Portrait of Stendhal in 1840",
+        "image": "stendhal-rodin-1600.webp",
+        "mid": "stendhal-rodin-900.webp",
+        "width": 1920,
+        "height": 2663,
+        "color": "rgb(232, 232, 216)",
+        "credit": "Berengier, Henri (Marseille, 15–02–1881 - 1943), graveur",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Portrait_de_Stendhal_en_1840,_88.23.jpg"
+      }
+    },
+    "graffitis-zero": {
+      "era": "2027",
+      "tone": "future",
+      "place": "Jardin du Luxembourg · the public toilets",
+      "when": "Populism vs the centre · 2023 → 2027",
+      "text": [
+        "Inside the toilets of the Jardin du Luxembourg: a big blue ZERO, and around it « Free Gaza », « Free Palestine », « Mélenchon 2027 », « Nik la police », « Qui pour nous protéger de la police ? », “Who will protect us from the police?”.",
+        "The Senate sits in the palace at the end of the garden. The angriest wall in the park is a few hundred metres from the upper house of Parliament."
+      ],
+      "scene": [
+        "In 2023 the pension reform was forced through without a vote, under article 49.3, after months of strikes. In 2024 the president dissolved the Assembly: the far right won the first round, a hastily formed left alliance the second, and the centre clung on between them.",
+        "Governments have fallen one after another since. This wall is the country in miniature: young, furious, split between left and right, and united against the middle."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Umberto boccioni, rissa in galleria, 1910, 01.jpg",
+        "caption": "Umberto Boccioni, Riot in the Galleria, 1910",
+        "image": "graffitis-zero-1600.webp",
+        "mid": "graffitis-zero-900.webp",
+        "width": 1920,
+        "height": 2214,
+        "color": "rgb(40, 24, 24)",
+        "credit": "Francesco Bini",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Umberto_boccioni,_rissa_in_galleria,_1910,_01.jpg"
+      }
+    },
+    "forza-napoli": {
+      "era": "1987",
+      "tone": "past",
+      "place": "A trattoria · exact spot not recorded",
+      "when": "Naples, in Paris",
+      "text": [
+        "« Forza Napoli » on a blue banner over a small Italian restaurant, the windows covered in the club's colours."
+      ],
+      "scene": [
+        "Napoli won its first Italian title in 1987 with Diego Maradona, then again in 1990, 2023 and 2025. In Naples, Maradona is a saint; in Paris, the shrine is a restaurant window.",
+        "Italians came to Paris in large numbers from the late 19th century, and brought their cafés with them, like the Café Napolitain on the boulevards, behind."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Béraud - Le boulevard des Capucines, le soir, devant le Café Napolitain, Vers 1880.jpg",
+        "caption": "Jean Béraud, In Front of the Café Napolitain, c. 1880",
+        "image": "forza-napoli-1600.webp",
+        "mid": "forza-napoli-900.webp",
+        "width": 1920,
+        "height": 1493,
+        "color": "rgb(24, 24, 24)",
+        "credit": "Jean Béraud",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:B%C3%A9raud_-_Le_boulevard_des_Capucines,_le_soir,_devant_le_Caf%C3%A9_Napolitain,_Vers_1880.jpg"
+      }
+    },
+    "abribus-burger-king": {
+      "era": "2012",
+      "tone": "modern",
+      "place": "A bus shelter · exact spot not recorded",
+      "when": "Hand-drawn masters / fast-food UFO",
+      "text": [
+        "Burger King's « Ice Burger », ice cream in a bun dripping chocolate, and the line « Un ovni parmi les desserts », “A UFO among desserts”.",
+        "For once an ad tells the truth: an alien object, landed in the capital of pastry."
+      ],
+      "scene": [
+        "Paris invented the art poster. In the 1890s Jules Chéret, then Mucha and Toulouse-Lautrec, turned ads for drinks and cabarets into lithographs people peeled off the walls to keep. Same job, selling, done by hand, by masters.",
+        "Burger King came to France in 1980, left in 1997, and returned in December 2012 at Gare Saint-Lazare, to queues hours long. In the city of haute cuisine, the American fast-food giant now owns the bus shelters."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Apéritif Mugnier affiche, Jules Chéret 90.jpg",
+        "caption": "Jules Chéret, poster for Apéritif Mugnier",
+        "image": "abribus-burger-king-1600.webp",
+        "mid": "abribus-burger-king-900.webp",
+        "width": 1920,
+        "height": 2531,
+        "color": "rgb(216, 184, 152)",
+        "credit": "Chéret, Jules (1836-1932). Illustrateur",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Ap%C3%A9ritif_Mugnier_affiche,_Jules_Ch%C3%A9ret_90.jpg"
+      }
+    },
+    "feu-vert": {
+      "era": "1944",
+      "tone": "modern",
+      "place": "A protest march · exact spot not recorded",
+      "when": "Pax Americana · 1944 → now",
+      "text": [
+        "« USA Champions », across the back of a man's jacket, crossing on the green light.",
+        "Taken during one of the recent national protest days. Thousands marching against the system, and on one back, without irony, the name of the system's winner. Behind them, police on a polished Haussmann street."
+      ],
+      "scene": [
+        "American troops paraded down the Champs-Élysées on 29 August 1944, four days after the Liberation. Then came Marshall Plan dollars, Coca-Cola, Hollywood, jeans, and in 1992 Disneyland, at the city's door.",
+        "France built itself as the exception: it left NATO's integrated command in 1966 and still defends a “cultural exception” for its films and songs. And the most ordinary jacket at an anti-system march still says USA."
+      ],
+      "note": "Caillebotte's Paris Street; Rainy Day, behind, may be the most Parisian street painting there is. It hangs in the Art Institute of Chicago.",
+      "art": {
+        "commons": "Gustave Caillebotte - Paris Street; Rainy Day - Google Art Project.jpg",
+        "caption": "Gustave Caillebotte, Paris Street; Rainy Day, 1877",
+        "image": "feu-vert-1600.webp",
+        "mid": "feu-vert-900.webp",
+        "width": 1920,
+        "height": 1454,
+        "color": "rgb(200, 200, 184)",
+        "credit": "Gustave Caillebotte",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg"
+      }
+    },
+    "gospel-dream": {
+      "era": "1198",
+      "tone": "past",
+      "place": "A concert poster · exact spot not recorded",
+      "when": "Music under the vaults · 1198 → now",
+      "text": [
+        "« Gospel Dream — chants authentiques de l'église afro-américaine », “authentic songs of the African-American church”: a choir in purple robes, in concert at the Église Saint-Louis-d'Antin, Friday 1 May, 8:30 pm."
+      ],
+      "scene": [
+        "Paris churches have always been concert halls. Around 1200, Léonin and Pérotin at Notre-Dame wrote some of Europe's first great polyphony, four voices at once, under vaults still being built.",
+        "Then came the organs: Widor at Saint-Sulpice for 64 years, Saint-Saëns and then Fauré at the Madeleine, Messiaen at La Trinité for six decades. Tonight the same stone carries a gospel choir."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Pérotin - Viderunt omnes.jpg",
+        "caption": "Pérotin, Viderunt omnes, Notre-Dame school, c. 1198",
+        "image": "gospel-dream-1600.webp",
+        "mid": "gospel-dream-900.webp",
+        "width": 439,
+        "height": 397,
+        "color": "rgb(232, 232, 232)",
+        "credit": "música de Pérotin",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:P%C3%A9rotin_-_Viderunt_omnes.jpg"
+      }
+    },
+    "parc-de-l-etrange": {
+      "era": "1786",
+      "tone": "past",
+      "place": "Parc André-Citroën",
+      "when": "Axis mundi",
+      "text": [
+        "« Le Parc de l'Étrange », “The Park of the Strange”, “the immersive Halloween event”, on a black banner at the gate of Parc André-Citroën.",
+        "Read it twice. L'étrange is the strange, the uncanny. Add one letter and l'étranger is the stranger, the foreigner, the immigrant. Paris has always been both."
+      ],
+      "scene": [
+        "Under the city lie the Catacombs: from 1786, the bones of some six million Parisians were moved from overflowing cemeteries into the old quarries. The capital literally stands on its dead.",
+        "Jung and Mircea Eliade wrote about the axis mundi, the centre where heaven, earth and the underworld meet. Paris works like one. People are drawn here from everywhere, the world changes here, and every layer is both a weight and a step: we stand on the shoulders of giants, and on their bones."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Nadar - Catacombes de Paris - NPS 74.jpg",
+        "caption": "Nadar, Catacombs of Paris, 1861–1862",
+        "image": "parc-de-l-etrange-1600.webp",
+        "mid": "parc-de-l-etrange-900.webp",
+        "width": 1920,
+        "height": 2591,
+        "color": "rgb(248, 248, 248)",
+        "credit": "Nadar",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Nadar_-_Catacombes_de_Paris_-_NPS_74.jpg"
+      }
+    },
+    "monument-aux-morts-15e": {
+      "era": "1914–1918",
+      "tone": "past",
+      "place": "15th arrondissement town hall",
+      "when": "To our dead · 1914 → 1919",
+      "text": [
+        "« À nos morts », “To our dead”: the war memorial of the 15th. Stone figures crowd the steps on either side; in the middle, one stands with an arm stretched out.",
+        "Behind them, Danton and Robespierre look on, enlisted in the defence of the Republic."
+      ],
+      "scene": [
+        "About 1.4 million French soldiers died in the First World War, and millions more came home wounded. Disabled veterans led the victory parade on 14 July 1919. Every memorial is a haunted house: names for bodies that never came back.",
+        "Would the men of 1793 have signed up? Robespierre fought the war of 1792 at the Jacobin Club: “No one loves armed missionaries.” Danton called for audacity to save the Republic, then tried to negotiate peace. Neither would obviously have blessed a war of empires allied with the Tsar."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Maréchal Ferdinand Foch saluant du bâton, à cheval, 14 juillet 1919.jpg",
+        "caption": "Marshal Foch at the Victory Parade, 14 July 1919",
+        "image": "monument-aux-morts-15e-1600.webp",
+        "mid": "monument-aux-morts-15e-900.webp",
+        "width": 1920,
+        "height": 1393,
+        "color": "rgb(8, 8, 8)",
+        "credit": "Agence de presse Meurisse",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Mar%C3%A9chal_Ferdinand_Foch_saluant_du_b%C3%A2ton,_%C3%A0_cheval,_14_juillet_1919.jpg"
+      }
+    },
+    "2cv-007": {
+      "era": "1981",
+      "tone": "modern",
+      "place": "Parc André-Citroën",
+      "when": "Paris, capital of intrigue",
+      "text": [
+        "A yellow Citroën 2CV with « 007 » on the door and stick-on bullet holes, a replica of the car Bond escapes in in For Your Eyes Only (1981).",
+        "Parked in the park built on the old Citroën factory site. The humblest car in France turned spy car."
+      ],
+      "scene": [
+        "Paris sells elegance to the world, and the world comes here to negotiate. The 1919 Peace Conference redrew Europe from the Quai d'Orsay; the Paris Peace Accords of 1973 ended America's direct war in Vietnam; the Paris climate agreement was sealed at Le Bourget in 2015.",
+        "UNESCO and the OECD are headquartered here, and NATO was until 1967. Bond came for the glamour, and for the spies."
+      ],
+      "note": "",
+      "art": {
+        "commons": "Orpen, William (Sir) (RA) - The Signing of Peace in the Hall of Mirrors, Versailles, 28th June 1919 - Google Art Project.jpg",
+        "caption": "William Orpen, The Signing of Peace in the Hall of Mirrors, 1919",
+        "image": "2cv-007-1600.webp",
+        "mid": "2cv-007-900.webp",
+        "width": 1920,
+        "height": 2304,
+        "color": "rgb(8, 8, 8)",
+        "credit": "William Orpen",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Orpen,_William_(Sir)_(RA)_-_The_Signing_of_Peace_in_the_Hall_of_Mirrors,_Versailles,_28th_June_1919_-_Google_Art_Project.jpg"
+      }
     }
   },
   "start": {

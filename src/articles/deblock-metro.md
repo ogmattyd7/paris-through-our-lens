@@ -1,5 +1,5 @@
 ---
-title: Own your money, in the métro
+title: Own your money
 author: 
 ---
 

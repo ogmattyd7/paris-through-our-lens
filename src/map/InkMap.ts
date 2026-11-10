@@ -105,11 +105,11 @@ export class InkMap {
     });
   }
 
-  overview(walkedAll = false) {
+  overview(walkedTo = 0) {
     this.walker.remove();
     this.pin.remove();
     this.card?.classList.remove('is-on');
-    (this.map.getSource('walked') as maplibregl.GeoJSONSource).setData(walkedAll ? line(this.route) : { type: 'FeatureCollection', features: [] });
+    (this.map.getSource('walked') as maplibregl.GeoJSONSource).setData(walkedTo > 0 ? line([...this.route.slice(0, pointAt(this.route, this.cum, walkedTo).i + 1), pointAt(this.route, this.cum, walkedTo).here]) : { type: 'FeatureCollection', features: [] });
     const cam = this.map.cameraForBounds([[2.255, 48.8156], [2.44, 48.9022]], { padding: 24 });
     this.map.easeTo({ center: cam?.center, zoom: cam?.zoom ?? 11.5, pitch: 0, bearing: 0, duration: 1600 });
     this.bearing = 0;
@@ -142,7 +142,7 @@ export class InkMap {
       this.card.classList.toggle('is-on', p > 0.55);
       this.card.style.setProperty('--arrive', String(arrive));
     }
-    this.map.jumpTo({ center: here, zoom: 13.4 + dive * 2.4 + arrive * 1.1, pitch: 15 + dive * 45 + arrive * 8, bearing: this.bearing * dive, padding: { left: 0, right: 0, top: 0, bottom: 0 } });
+    this.map.jumpTo({ center: here, zoom: 13.4 + dive * 2.9 + arrive * 1.0, pitch: 15 + dive * 50 + arrive * 5, bearing: this.bearing * dive, padding: { left: 0, right: 0, top: 0, bottom: 0 } });
     if (dist(here, this.q.at) > 40) {
       const f = quartiers.features.find((f) => {
         const g = f.geometry as { type: string; coordinates: unknown };
