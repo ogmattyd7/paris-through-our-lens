@@ -1,0 +1,38 @@
+[
+  {
+    "id": "barricade-1",
+    "title": "Fighting on the Pont d'Arcole, 28 July 1830",
+    "artist": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Anonymous_-_Combat_du_pont_d%27Arcole_%C3%A0_Paris,_le_28_juillet_1830_-_P894_-_Mus%C3%A9e_Carnavalet.jpg",
+    "w": 1920,
+    "h": 1594
+  },
+  {
+    "id": "barricade-2",
+    "title": "Fighting at the Porte Saint-Denis, 28 July 1830",
+    "artist": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:R%C3%A9volution_de_1830_-_Combat_de_la_Porte_Saint-Denis_-_28.07.1830.jpg",
+    "w": 1920,
+    "h": 1395
+  },
+  {
+    "id": "barricade-3",
+    "title": "Fighting in front of the Hôtel de Ville, 28 July 1830",
+    "artist": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:R%C3%A9volution_de_1830_-_Combat_devant_l%27h%C3%B4tel_de_ville_-_28.07.1830.jpg",
+    "w": 1920,
+    "h": 1773
+  },
+  {
+    "id": "barricade-4",
+    "title": "Fighting in the rue de Rohan, 29 July 1830",
+    "artist": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:R%C3%A9volution_de_1830_-_Combat_de_la_rue_de_Rohan_-_29.07.1830.jpg",
+    "w": 1920,
+    "h": 1402
+  }
+]
