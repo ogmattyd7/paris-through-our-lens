@@ -87,7 +87,7 @@
       "place": "Around the 5th arrondissement · a green door",
       "when": "Communist Paris · 1920 → 1936",
       "text": [
-        "« Tu es communiste ? Rejoins-nous ! Révolution » — “Are you a communist? Join us! Revolution”. Someone has scrawled an answer across it: « Rebelle ? », “Rebel?”",
+        "« Tu es communiste ? Rejoins-nous ! Révolution » — “Are you a communist? Join us! Revolution”. Someone has crossed the word out.",
         "A recruiting sticker. Its full-size posters are the next stop."
       ],
       "scene": [
@@ -139,16 +139,16 @@
       "caption": "Around the 5th · exact address not recorded"
     },
     "rue-du-palais": {
-      "era": "1831",
+      "era": "1789",
       "tone": "past",
-      "when": "Mocking the king · 1831 → 1834",
+      "when": "Below the belt · 1780s → now",
       "text": [
-        "Pencilled under a Rue du Palais sign: « Macron castration ». Crude, personal, aimed at the body of the man in power.",
-        "Going after the ruler's body is a Paris tradition."
+        "« Macron castration », pencilled on a street sign. Crude, personal, aimed at the body of the man in power.",
+        "French politics has always been argued below the belt."
       ],
       "scene": [
-        "In 1831 Charles Philipon, on trial in Paris for insulting King Louis-Philippe, sketched the royal face melting into a pear. La poire became the regime's nickname, drawn on walls all over the city.",
-        "Honoré Daumier went further: in Gargantua he drew the king as a giant swallowing the taxes of the poor. It earned him six months in prison."
+        "Before 1789, the libelles, cheap pamphlets printed in London and Amsterdam and smuggled into Paris, accused Marie-Antoinette of orgies and lovers of both sexes, and mocked Louis XVI as impotent. Historians count them among the things that stripped the monarchy of its sacred aura.",
+        "The Revolution printed it daily: Hébert's Le Père Duchesne swore on every page. In 1831 Philipon turned Louis-Philippe into a pear, and Daumier drew him as Gargantua and got six months in prison. The satirical papers, Le Canard enchaîné, Charlie Hebdo, and the walls themselves keep the habit alive."
       ],
       "note": "",
       "outside": true,
@@ -223,14 +223,14 @@
       "era": "1793",
       "tone": "past",
       "place": "Louvre Museum, door of the Galerie d'Apollon",
-      "when": "1793 → 2025",
+      "when": "1793 · the palace turned inside out",
       "text": [
         "Carved over the door: “The Louvre Museum, founded on 16 September 1792 by decree of the Legislative Assembly, was opened on 10 August 1793 by decree of the National Convention.”",
-        "A royal palace turned public museum, one year to the day after the monarchy fell."
+        "A king's palace, seized and thrown open to anyone, one year to the day after the monarchy fell."
       ],
       "scene": [
-        "Behind this door: the French crown jewels.",
-        "On 19 October 2025, in broad daylight, thieves raised a furniture lift to a window of the Galerie d'Apollon and left with eight pieces of 19th-century crown jewellery in a few minutes. The Revolution opened the palace to everyone; the heist reminded everyone what is inside."
+        "Seven months after Louis XVI was guillotined, his palace opened as the Muséum central des arts. Entry was free. Paintings collected by kings, for kings, now hung for whoever walked in off the street.",
+        "The order flipped: the subjects strolled through the royal apartments, and what had been private treasure became the nation's property. Every free first Sunday, the crowd that fills the Grande Galerie is still living off that decree."
       ],
       "note": "",
       "art": {
@@ -247,17 +247,17 @@
       }
     },
     "dessins-faits-main": {
-      "era": "1909",
+      "era": "1793",
       "tone": "future",
       "place": "1st arrondissement, near Châtelet · an artists' collective",
-      "when": "Futurism · 1909",
+      "when": "Kill the past · 1793 → 1909 → 1968",
       "text": [
-        "“Handmade drawings 25€”. One is captioned « Kill the past, embrace the future »: a man fires a pistol while kissing a woman, while another woman ignores them over cake.",
-        "Sold in an artists' collective near Châtelet, a short walk from the Louvre."
+        "« Kill the past, embrace the future »: a man fires a pistol while kissing a woman; another woman ignores them both and eats her cake.",
+        "Murder, romance and dessert in one frame."
       ],
       "scene": [
-        "“Kill the past” is the Futurist programme. On 20 February 1909 Filippo Tommaso Marinetti published the Futurist Manifesto on the front page of Le Figaro, in Paris: set fire to the libraries, flood the museums, worship speed.",
-        "Paris printed it, then ignored the advice. The Louvre is still standing next door."
+        "Paris has tried to kill its past on purpose, again and again. The revolutionaries restarted time itself: Year I of the Republic, new months, ten-day weeks. In 1793 they pulled the kings of Judah off the façade of Notre-Dame, taking them for kings of France, and cut off their heads.",
+        "In 1909 Marinetti published the Futurist Manifesto on the front page of Le Figaro: burn the libraries, flood the museums. In May 1968 the walls answered: « Sous les pavés, la plage ! ». The city keeps every past it has, and keeps trying to kill them."
       ],
       "note": "",
       "art": {
@@ -274,30 +274,30 @@
       }
     },
     "le-parisien": {
-      "era": "2004",
+      "era": "1979",
       "tone": "modern",
       "place": "15th arrondissement, off rue de la Convention",
-      "when": "Aedes albopictus · 2004 → now",
+      "when": "Ennemi public numéro un · 1912 → 1979",
       "text": [
-        "« Le moustique, ennemi public numéro 1 » — “The mosquito, public enemy number one”, across Le Parisien's front page, under a giant tiger mosquito.",
-        "The new public enemy is a few millimetres long, black with white stripes, and bites in broad daylight."
+        "« Le moustique, ennemi public numéro 1 »: the mosquito, public enemy number one, across Le Parisien's front page.",
+        "In Paris, that title already had an owner."
       ],
       "scene": [
-        "The tiger mosquito was first found in mainland France in 2004, near Menton. It travels with us, in tyres, plant pots and car boots, and has since colonised Paris and the whole Île-de-France.",
-        "It can carry dengue, chikungunya and Zika, and Île-de-France has now recorded its first locally transmitted dengue cases. The tropics have arrived by commuter train."
+        "Jacques Mesrine: bank robber, kidnapper, escape artist, “the man of a thousand faces”. In May 1978 he broke out of La Santé, the Paris prison said to be escape-proof, then gave interviews to Paris Match while every police force in France hunted him.",
+        "On 2 November 1979, at Porte de Clignancourt, the anti-gang squad boxed in his BMW in traffic and opened fire. Whether he was ever given the chance to surrender is still argued over. Before him, in 1911–12, the Bonnot gang had terrorised Paris as the first bandits with a getaway car. The city has always kept a soft spot for its public enemies."
       ],
-      "note": "« Ennemi public numéro un » is borrowed from 1930s America; France gave the title to the gangster Jacques Mesrine. Now it goes to an insect.",
+      "note": "",
       "art": {
-        "commons": "CDC-Gathany-Aedes-albopictus-1.jpg",
-        "caption": "James Gathany (CDC), tiger mosquito, Aedes albopictus",
+        "commons": "La bande à Bonnot - La fin d'un bandit.jpg",
+        "caption": "The end of Bonnot, 1912",
         "image": "le-parisien-1600.webp",
         "mid": "le-parisien-900.webp",
-        "width": 1920,
-        "height": 1272,
-        "color": "rgb(72, 88, 40)",
-        "credit": "James Gathany, CDC",
+        "width": 1400,
+        "height": 1126,
+        "color": "rgb(72, 56, 56)",
+        "credit": "Anonymous",
         "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:CDC-Gathany-Aedes-albopictus-1.jpg"
+        "source": "https://commons.wikimedia.org/wiki/File:La_bande_%C3%A0_Bonnot_-_La_fin_d%27un_bandit.jpg"
       }
     },
     "big-black-cook": {
@@ -306,8 +306,7 @@
       "place": "3rd arrondissement",
       "when": "Caribbean Paris · 1963 → now",
       "text": [
-        "BIG BLACK COOK. Read it out loud. Now read it again, slower. Yes. They meant it.",
-        "A Black Caribbean restaurant in the 3rd that puts a dick joke on its sign has nothing to prove about its food."
+        "BIG BLACK COOK."
       ],
       "scene": [
         "From 1963 to 1981 a state agency, the BUMIDOM, moved tens of thousands of people from Guadeloupe, Martinique, French Guiana and Réunion to mainland France, many into Paris jobs in hospitals, the post office and transport.",

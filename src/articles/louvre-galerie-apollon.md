@@ -1,5 +1,5 @@
 ---
-title: The Louvre, Galerie d'Apollon
+title: The Louvre, thrown open
 author: 
 ---
 
