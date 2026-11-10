@@ -229,10 +229,10 @@ export default function App() {
       </header>
 
       <div className="journey">
-        <aside className="arch-wrap" aria-hidden>
+        <aside className="arch-wrap" aria-label="Map of the walk">
           <div className="arch">
             <div ref={mapEl} className="map-layer" />
-            <div className="hud">
+            <div className="hud" aria-hidden>
               <span className="hud-n" />
               <div>
                 <strong className="hud-era" />
