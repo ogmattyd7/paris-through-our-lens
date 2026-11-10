@@ -152,23 +152,27 @@ export default function App() {
       gsap.ticker.add(raf);
       gsap.ticker.lagSmoothing(0);
     }
+    type Mark = { t: ScrollTrigger; apply: () => void };
+    const marks: Mark[] = [];
+    let settle = () => {};
     const ctx = gsap.context(() => {
       placeTicks();
       ScrollTrigger.create({ start: 0, end: 'max', onUpdate: (t) => bar.style.setProperty('--p', t.progress.toFixed(4)) });
-      ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom 60%', onEnterBack: () => { setHud(-1); show((m) => m.overview()); hud.km.textContent = ''; } });
+      const toHero = () => { setHud(-1); show((m) => m.overview()); hud.km.textContent = ''; };
+      ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom 60%', onEnterBack: toHero });
       gsap.utils.toArray<HTMLElement>('.approach').forEach((el) => {
         const k = Number(el.dataset.k);
         const st = stops[k];
         const from = k && !stops[k - 1].outside ? stops[k - 1].d : k ? total : 0;
         const street = el.querySelector('.walk-street')!, quart = el.querySelector('.walk-q')!, left = el.querySelector('.walk-left')!;
-        ScrollTrigger.create({
+        const arrive = () => {
+          setHud(k);
+          setMood('street');
+          if (st.outside) { show((m) => m.overview(true)); visit(stops.length); }
+        };
+        marks.push({ t: ScrollTrigger.create({
           trigger: el, start: 'top 85%', end: 'bottom 35%',
-          onToggle: (t) => {
-            if (!t.isActive) return;
-            setHud(k);
-            setMood('street');
-            if (st.outside) { show((m) => m.overview(true)); visit(stops.length); }
-          },
+          onToggle: (t) => { if (t.isActive) arrive(); },
           onUpdate: (t) => {
             if (st.outside) return;
             const p = t.progress;
@@ -183,14 +187,21 @@ export default function App() {
             left.textContent = p >= 0.97 ? 'You are here.' : `${km(st.d - d)} to go`;
             hud.km.textContent = `${km(d)} walked`;
           },
-        });
+        }), apply: arrive });
       });
       gsap.utils.toArray<HTMLElement>('.ch').forEach((ch) => {
         const k = Number(ch.dataset.k);
-        // onEnter (not onToggle+isActive) so jumps that skip past chapters still leave the HUD on the last one.
         const enter = () => { setHud(k); visit(k); setMood(stops[k].ch.tone); };
-        ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onEnter: enter, onEnterBack: enter });
+        marks.push({ t: ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) enter(); } }), apply: enter });
       });
+      // Jumps (End key, Back button, fast flicks) fire callbacks of skipped triggers in creation order,
+      // so once scrolling stops, re-apply whichever stop actually starts last above the current position.
+      settle = () => {
+        const y = scrollY;
+        const at = marks.reduce<Mark | null>((b, m) => (m.t.start <= y && (!b || m.t.start > b.t.start) ? m : b), null);
+        if (at) at.apply(); else toHero();
+      };
+      ScrollTrigger.addEventListener('scrollEnd', settle);
       ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => show((m) => m.overview(true)) });
       if (reduced) return;
       gsap.from('.hero-line', { yPercent: 110, opacity: 0, duration: 1.8, stagger: 0.12, ease: 'expo.out', delay: 0.2 });
@@ -221,6 +232,7 @@ export default function App() {
       io?.disconnect();
       ctx.revert();
       ScrollTrigger.removeEventListener('refresh', placeTicks);
+      ScrollTrigger.removeEventListener('scrollEnd', settle);
       hudRo.disconnect();
       if (lenis) { gsap.ticker.remove(raf); lenis.destroy(); }
     };
