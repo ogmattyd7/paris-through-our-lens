@@ -194,14 +194,16 @@ export default function App() {
         const enter = () => { setHud(k); visit(k); setMood(stops[k].ch.tone); };
         marks.push({ t: ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) enter(); } }), apply: enter });
       });
-      // Jumps (End key, Back button, fast flicks) fire callbacks of skipped triggers in creation order,
-      // so once scrolling stops, re-apply whichever stop actually starts last above the current position.
+      // Jumps (End key, Back button, fast flicks) fire callbacks of skipped triggers in creation order, and a
+      // restored scroll position fires none; so after scrolling stops or triggers refresh, re-apply whichever
+      // stop actually starts last above the current position.
       settle = () => {
         const y = scrollY;
         const at = marks.reduce<Mark | null>((b, m) => (m.t.start <= y && (!b || m.t.start > b.t.start) ? m : b), null);
         if (at) at.apply(); else toHero();
       };
       ScrollTrigger.addEventListener('scrollEnd', settle);
+      ScrollTrigger.addEventListener('refresh', settle);
       ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => show((m) => m.overview(true)) });
       if (reduced) return;
       gsap.from('.hero-line', { yPercent: 110, opacity: 0, duration: 1.8, stagger: 0.12, ease: 'expo.out', delay: 0.2 });
@@ -233,6 +235,7 @@ export default function App() {
       ctx.revert();
       ScrollTrigger.removeEventListener('refresh', placeTicks);
       ScrollTrigger.removeEventListener('scrollEnd', settle);
+      ScrollTrigger.removeEventListener('refresh', settle);
       hudRo.disconnect();
       if (lenis) { gsap.ticker.remove(raf); lenis.destroy(); }
     };
