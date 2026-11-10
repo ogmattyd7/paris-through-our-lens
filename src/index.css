@@ -242,5 +242,11 @@ button { font: inherit; }
 @keyframes bq-wave { to { transform: skewY(7deg) scaleX(0.9); } }
 @keyframes bq-drift { to { transform: translateX(-6%) scale(1.12); } }
 @media (max-width: 800px) { .barricade { height: 360vh; margin: 0; } .bq-stage { top: 44vh; height: 56vh; } }
-@media (prefers-reduced-motion: reduce) { .bq-flashes i, .bq-smoke, .bq-flag { animation: none; } .bq-beat { position: static; opacity: 1; margin-bottom: 1em; } }
+@media (prefers-reduced-motion: reduce) {
+  .bq-flashes i, .bq-smoke, .bq-flag { animation: none; }
+  .barricade { height: auto; }
+  .bq-stage { position: relative; top: 0; height: auto; min-height: 100vh; padding: 10vh 0 18vh; }
+  .bq-text { position: relative; z-index: 3; top: 0; padding: 20px 24px; background: rgba(20,13,7,0.82); }
+  .bq-beat { position: static; opacity: 1; margin-bottom: 1em; }
+}
 .ch-neon { position: absolute; inset: 0; background: radial-gradient(circle at 28% 30%, rgba(255,45,149,0.85), transparent 42%), radial-gradient(circle at 76% 72%, rgba(0,224,176,0.7), transparent 46%), #0b0b0f; }
