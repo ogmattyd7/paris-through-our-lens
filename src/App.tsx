@@ -187,7 +187,9 @@ export default function App() {
       });
       gsap.utils.toArray<HTMLElement>('.ch').forEach((ch) => {
         const k = Number(ch.dataset.k);
-        ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) { setHud(k); visit(k); setMood(stops[k].ch.tone); } } });
+        // onEnter (not onToggle+isActive) so jumps that skip past chapters still leave the HUD on the last one.
+        const enter = () => { setHud(k); visit(k); setMood(stops[k].ch.tone); };
+        ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onEnter: enter, onEnterBack: enter });
       });
       ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => show((m) => m.overview(true)) });
       if (reduced) return;
