@@ -122,6 +122,10 @@ export default function App() {
       });
     };
     ScrollTrigger.addEventListener('refresh', placeTicks);
+    // Keeps the map attribution control above the HUD card that overlaps the map's bottom edge.
+    const hudBox = root.current!.querySelector<HTMLElement>('.hud')!;
+    const hudRo = new ResizeObserver(() => hudBox.parentElement!.style.setProperty('--hud-h', `${hudBox.offsetHeight}px`));
+    hudRo.observe(hudBox);
     let hudK = -2;
     let visited = -1;
     let view: (m: InkMap) => unknown = (m) => m.overview();
@@ -215,6 +219,7 @@ export default function App() {
       io?.disconnect();
       ctx.revert();
       ScrollTrigger.removeEventListener('refresh', placeTicks);
+      hudRo.disconnect();
       if (lenis) { gsap.ticker.remove(raf); lenis.destroy(); }
     };
   }, []);
