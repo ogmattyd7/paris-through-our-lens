@@ -71,6 +71,8 @@ function placeOf(st: Stop) {
 export default function App() {
   const mapEl = useRef<HTMLDivElement>(null);
   const ink = useRef<InkMap | null>(null);
+  // Replays the latest camera/pins on a map that finishes loading after the visitor has scrolled.
+  const syncMap = useRef<(m: InkMap) => void>((m) => m.overview());
   const root = useRef<HTMLDivElement>(null);
   const [sound, setSoundOn] = useState(false);
   const toggleSound = () => setSoundOn((on) => { setSound(!on); return !on; });
@@ -96,7 +98,7 @@ export default function App() {
       .then((m) => {
         if (!alive) return;
         ink.current = m;
-        m.overview();
+        syncMap.current(m);
         root.current?.classList.add('map-ready');
         ScrollTrigger.refresh();
       })
@@ -121,6 +123,11 @@ export default function App() {
     };
     ScrollTrigger.addEventListener('refresh', placeTicks);
     let hudK = -2;
+    let visited = -1;
+    let view: (m: InkMap) => unknown = (m) => m.overview();
+    const visit = (k: number) => { visited = k; ink.current?.visit(k); };
+    const show = (fn: (m: InkMap) => unknown) => { view = fn; return ink.current ? fn(ink.current) : undefined; };
+    syncMap.current = (m) => { view(m); m.visit(visited); };
     const setHud = (k: number) => {
       if (k === hudK) return;
       hudK = k;
@@ -130,7 +137,7 @@ export default function App() {
       hud.place.textContent = st ? placeOf(st) : 'In front of Notre-Dame, where every road in France begins';
       hud.dots.forEach((d, i) => { d.classList.toggle('on', i < k); d.classList.toggle('now', i === k); });
       ticks.forEach((t, i) => t.classList.toggle('on', i <= k));
-      ink.current?.visit(k - 1);
+      visit(k - 1);
     };
     setHud(-1);
 
@@ -144,7 +151,7 @@ export default function App() {
     const ctx = gsap.context(() => {
       placeTicks();
       ScrollTrigger.create({ start: 0, end: 'max', onUpdate: (t) => bar.style.setProperty('--p', t.progress.toFixed(4)) });
-      ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom 60%', onEnterBack: () => { setHud(-1); ink.current?.overview(); hud.km.textContent = ''; } });
+      ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom 60%', onEnterBack: () => { setHud(-1); show((m) => m.overview()); hud.km.textContent = ''; } });
       gsap.utils.toArray<HTMLElement>('.approach').forEach((el) => {
         const k = Number(el.dataset.k);
         const st = stops[k];
@@ -156,13 +163,14 @@ export default function App() {
             if (!t.isActive) return;
             setHud(k);
             setMood('street');
-            if (st.outside) { ink.current?.overview(true); ink.current?.visit(stops.length); }
+            if (st.outside) { show((m) => m.overview(true)); visit(stops.length); }
           },
           onUpdate: (t) => {
             if (st.outside) return;
             const p = t.progress;
             const d = from + (st.d - from) * (p * p * (3 - 2 * p));
-            const q = ink.current?.walk(d, p, { img: photoUrl(st.photo.thumb), at: st.at }) ?? '';
+            const dest = { img: photoUrl(st.photo.thumb), at: st.at };
+            const q = (show((m) => m.walk(d, p, dest)) as string | undefined) ?? '';
             const f = st.leg ? (d - st.s) / Math.max(1, st.e - st.s) : 0;
             const name = [...(st.leg?.streets ?? [])].reverse().find(([at]) => at <= f + 0.01)?.[1] ?? '';
             if (street.textContent !== name) street.textContent = name;
@@ -175,9 +183,9 @@ export default function App() {
       });
       gsap.utils.toArray<HTMLElement>('.ch').forEach((ch) => {
         const k = Number(ch.dataset.k);
-        ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) { setHud(k); ink.current?.visit(k); setMood(stops[k].ch.tone); } } });
+        ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) { setHud(k); visit(k); setMood(stops[k].ch.tone); } } });
       });
-      ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => ink.current?.overview(true) });
+      ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => show((m) => m.overview(true)) });
       if (reduced) return;
       gsap.from('.hero-line', { yPercent: 110, opacity: 0, duration: 1.8, stagger: 0.12, ease: 'expo.out', delay: 0.2 });
     }, root);
