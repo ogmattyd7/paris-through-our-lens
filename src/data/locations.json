@@ -116,6 +116,15 @@
     "precision": "approx",
     "clue": "Photographer: the 15th"
   },
+  "abribus-burger-king": {
+    "step": 17,
+    "title": "abribus-burger-king",
+    "place": "14th arrondissement",
+    "lat": 48.82924,
+    "lng": 2.32654,
+    "precision": "approx",
+    "clue": "Photographer: the 14th"
+  },
   "feu-vert": {
     "step": 18,
     "title": "feu-vert",

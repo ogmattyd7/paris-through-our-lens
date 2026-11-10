@@ -458,7 +458,7 @@
     "abribus-burger-king": {
       "era": "2012",
       "tone": "modern",
-      "place": "A bus shelter · exact spot not recorded",
+      "place": "A bus shelter in the 14th",
       "when": "Hand-drawn masters / fast-food UFO",
       "text": [
         "Burger King's « Ice Burger », ice cream in a bun dripping chocolate, and the line « Un ovni parmi les desserts », “A UFO among desserts”.",
@@ -480,7 +480,8 @@
         "credit": "Chéret, Jules (1836-1932). Illustrateur",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Ap%C3%A9ritif_Mugnier_affiche,_Jules_Ch%C3%A9ret_90.jpg"
-      }
+      },
+      "caption": "In the 14th · exact spot not recorded"
     },
     "feu-vert": {
       "era": "1944",
