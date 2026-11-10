@@ -229,7 +229,7 @@ export default function App() {
       </header>
 
       <div className="journey">
-        <aside className="arch-wrap" aria-hidden inert>
+        <aside className="arch-wrap" aria-hidden>
           <div className="arch">
             <div ref={mapEl} className="map-layer" />
             <div className="hud">
