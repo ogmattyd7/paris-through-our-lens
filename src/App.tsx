@@ -77,7 +77,21 @@ export default function App() {
 
   useEffect(() => {
     let alive = true;
-    import('./map/InkMap')
+    // WebGL map setup is the heaviest work on the page: start it once the hero has painted and the
+    // main thread is idle, or right away on the visitor's first scroll/touch. It already fades in.
+    const events = ['wheel', 'touchstart', 'pointerdown', 'keydown', 'scroll'] as const;
+    const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 200));
+    let started = false;
+    const start = () => {
+      if (started || !alive) return;
+      started = true;
+      events.forEach((e) => removeEventListener(e, start));
+      loadMap();
+    };
+    events.forEach((e) => addEventListener(e, start, { passive: true, once: true }));
+    const onLoad = () => idle(start, { timeout: 1500 });
+    if (document.readyState === 'complete') onLoad(); else addEventListener('load', onLoad, { once: true });
+    const loadMap = () => import('./map/InkMap')
       .then(({ InkMap }) => InkMap.create(mapEl.current!, route, waypoints))
       .then((m) => {
         if (!alive) return;
@@ -87,7 +101,11 @@ export default function App() {
         ScrollTrigger.refresh();
       })
       .catch((e) => console.error(e));
-    return () => { alive = false; };
+    return () => {
+      alive = false;
+      events.forEach((e) => removeEventListener(e, start));
+      removeEventListener('load', onLoad);
+    };
   }, []);
 
   useLayoutEffect(() => {
@@ -162,7 +180,11 @@ export default function App() {
       ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => ink.current?.overview(true) });
       if (reduced) return;
       gsap.from('.hero-line', { yPercent: 110, opacity: 0, duration: 1.8, stagger: 0.12, ease: 'expo.out', delay: 0.2 });
-      gsap.utils.toArray<HTMLElement>('.ch').forEach((ch) => {
+    }, root);
+    // Decorative tweens are built per section just before it scrolls into view, so page load
+    // doesn't pay for ~150 tweens (and their layout reads) up front.
+    const animateSection = (sec: HTMLElement) => ctx.add(() => {
+      sec.querySelectorAll<HTMLElement>('.ch').forEach((ch) => {
         gsap.fromTo(ch.querySelector('.ch-bg img'), { scale: 1.22, yPercent: -4 }, { scale: 1.02, yPercent: 4, ease: 'none', scrollTrigger: { trigger: ch, start: 'top bottom', end: 'bottom top', scrub: true } });
         gsap.fromTo(ch.querySelectorAll('.ch-scene .w'), { opacity: 0.3, filter: 'blur(1.5px)' }, { opacity: 1, filter: 'blur(0px)', stagger: 0.05, ease: 'none', scrollTrigger: { trigger: ch.querySelector('.ch-scene'), start: 'top 75%', end: 'bottom 75%', scrub: true } });
         gsap.fromTo(ch.querySelector('.ch-veil'), { opacity: 0.35 }, { opacity: 1, ease: 'none', scrollTrigger: { trigger: ch, start: 'top top', end: '+=100%', scrub: true } });
@@ -170,12 +192,19 @@ export default function App() {
         gsap.fromTo(ch.querySelector('.ch-plate'), { clipPath: 'inset(100% 0% 0% 0%)', y: 120, rotate: 0 },
           { clipPath: 'inset(0% 0% 0% 0%)', y: 0, rotate: -1.2, duration: 1.8, ease: 'expo.inOut', scrollTrigger: { trigger: ch.querySelector('.ch-body'), start: 'top 80%' } });
       });
-      gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) =>
+      sec.querySelectorAll<HTMLElement>('.reveal').forEach((el) =>
         gsap.from(el, { y: 40, opacity: 0, duration: 1.4, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
-      gsap.utils.toArray<HTMLElement>('.approach-card').forEach((el) =>
+      sec.querySelectorAll<HTMLElement>('.approach-card').forEach((el) =>
         gsap.from(el, { y: 60, opacity: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: el.parentElement, start: 'top 75%' } }));
-    }, root);
+    });
+    const io = reduced ? null : new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      io!.unobserve(e.target);
+      animateSection(e.target as HTMLElement);
+    }), { rootMargin: '150% 0px' });
+    root.current!.querySelectorAll('.stop, .outro').forEach((el) => io?.observe(el));
     return () => {
+      io?.disconnect();
       ctx.revert();
       ScrollTrigger.removeEventListener('refresh', placeTicks);
       if (lenis) { gsap.ticker.remove(raf); lenis.destroy(); }
@@ -192,7 +221,7 @@ export default function App() {
       </header>
 
       <div className="journey">
-        <aside className="arch-wrap" aria-hidden>
+        <aside className="arch-wrap" aria-hidden inert>
           <div className="arch">
             <div ref={mapEl} className="map-layer" />
             <div className="hud">
