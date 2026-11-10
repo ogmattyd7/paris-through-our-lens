@@ -21,10 +21,11 @@ export default function Barricade() {
   const [extra, setExtra] = useState(0);
 
   useLayoutEffect(() => {
+    if (reduced) return;
     const el = root.current!;
     const beats = el.querySelectorAll('.bq-beat');
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: 'top top', end: 'bottom bottom', scrub: reduced ? false : 0.6 } });
+      const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: 'top top', end: 'bottom bottom', scrub: 0.6 } });
       tl.fromTo('.bq-world', { scale: 1 }, { scale: 1.45, ease: 'none', duration: beats.length }, 0);
       beats.forEach((b, i) => {
         tl.fromTo(b, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.3 }, i);
