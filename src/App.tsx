@@ -71,6 +71,8 @@ function placeOf(st: Stop) {
 export default function App() {
   const mapEl = useRef<HTMLDivElement>(null);
   const ink = useRef<InkMap | null>(null);
+  // Replays the latest camera/pins on a map that finishes loading after the visitor has scrolled.
+  const syncMap = useRef<(m: InkMap) => void>((m) => m.overview());
   const root = useRef<HTMLDivElement>(null);
   const [sound, setSoundOn] = useState(false);
   const toggleSound = () => setSoundOn((on) => { setSound(!on); return !on; });
@@ -96,7 +98,7 @@ export default function App() {
       .then((m) => {
         if (!alive) return;
         ink.current = m;
-        m.overview();
+        syncMap.current(m);
         root.current?.classList.add('map-ready');
         ScrollTrigger.refresh();
       })
@@ -120,7 +122,16 @@ export default function App() {
       });
     };
     ScrollTrigger.addEventListener('refresh', placeTicks);
+    // Keeps the map attribution control above the HUD card that overlaps the map's bottom edge.
+    const hudBox = root.current!.querySelector<HTMLElement>('.hud')!;
+    const hudRo = new ResizeObserver(() => hudBox.parentElement!.style.setProperty('--hud-h', `${hudBox.offsetHeight}px`));
+    hudRo.observe(hudBox);
     let hudK = -2;
+    let visited = -1;
+    let view: (m: InkMap) => unknown = (m) => m.overview();
+    const visit = (k: number) => { visited = k; ink.current?.visit(k); };
+    const show = (fn: (m: InkMap) => unknown) => { view = fn; return ink.current ? fn(ink.current) : undefined; };
+    syncMap.current = (m) => { view(m); m.visit(visited); };
     const setHud = (k: number) => {
       if (k === hudK) return;
       hudK = k;
@@ -130,7 +141,7 @@ export default function App() {
       hud.place.textContent = st ? placeOf(st) : 'In front of Notre-Dame, where every road in France begins';
       hud.dots.forEach((d, i) => { d.classList.toggle('on', i < k); d.classList.toggle('now', i === k); });
       ticks.forEach((t, i) => t.classList.toggle('on', i <= k));
-      ink.current?.visit(k - 1);
+      visit(k - 1);
     };
     setHud(-1);
 
@@ -141,28 +152,33 @@ export default function App() {
       gsap.ticker.add(raf);
       gsap.ticker.lagSmoothing(0);
     }
+    type Mark = { t: ScrollTrigger; apply: () => void };
+    const marks: Mark[] = [];
+    let settle = () => {};
     const ctx = gsap.context(() => {
       placeTicks();
       ScrollTrigger.create({ start: 0, end: 'max', onUpdate: (t) => bar.style.setProperty('--p', t.progress.toFixed(4)) });
-      ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom 60%', onEnterBack: () => { setHud(-1); ink.current?.overview(); hud.km.textContent = ''; } });
+      const toHero = () => { setHud(-1); show((m) => m.overview()); hud.km.textContent = ''; };
+      ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom 60%', onEnterBack: toHero });
       gsap.utils.toArray<HTMLElement>('.approach').forEach((el) => {
         const k = Number(el.dataset.k);
         const st = stops[k];
         const from = k && !stops[k - 1].outside ? stops[k - 1].d : k ? total : 0;
         const street = el.querySelector('.walk-street')!, quart = el.querySelector('.walk-q')!, left = el.querySelector('.walk-left')!;
-        ScrollTrigger.create({
+        const arrive = () => {
+          setHud(k);
+          setMood('street');
+          if (st.outside) { show((m) => m.overview(true)); visit(stops.length); }
+        };
+        marks.push({ t: ScrollTrigger.create({
           trigger: el, start: 'top 85%', end: 'bottom 35%',
-          onToggle: (t) => {
-            if (!t.isActive) return;
-            setHud(k);
-            setMood('street');
-            if (st.outside) { ink.current?.overview(true); ink.current?.visit(stops.length); }
-          },
+          onToggle: (t) => { if (t.isActive) arrive(); },
           onUpdate: (t) => {
             if (st.outside) return;
             const p = t.progress;
             const d = from + (st.d - from) * (p * p * (3 - 2 * p));
-            const q = ink.current?.walk(d, p, { img: photoUrl(st.photo.thumb), at: st.at }) ?? '';
+            const dest = { img: photoUrl(st.photo.thumb), at: st.at };
+            const q = (show((m) => m.walk(d, p, dest)) as string | undefined) ?? '';
             const f = st.leg ? (d - st.s) / Math.max(1, st.e - st.s) : 0;
             const name = [...(st.leg?.streets ?? [])].reverse().find(([at]) => at <= f + 0.01)?.[1] ?? '';
             if (street.textContent !== name) street.textContent = name;
@@ -171,13 +187,24 @@ export default function App() {
             left.textContent = p >= 0.97 ? 'You are here.' : `${km(st.d - d)} to go`;
             hud.km.textContent = `${km(d)} walked`;
           },
-        });
+        }), apply: arrive });
       });
       gsap.utils.toArray<HTMLElement>('.ch').forEach((ch) => {
         const k = Number(ch.dataset.k);
-        ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) { setHud(k); ink.current?.visit(k); setMood(stops[k].ch.tone); } } });
+        const enter = () => { setHud(k); visit(k); setMood(stops[k].ch.tone); };
+        marks.push({ t: ScrollTrigger.create({ trigger: ch, start: 'top center', end: 'bottom center', onToggle: (t) => { if (t.isActive) enter(); } }), apply: enter });
       });
-      ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => ink.current?.overview(true) });
+      // Jumps (End key, Back button, fast flicks) fire callbacks of skipped triggers in creation order, and a
+      // restored scroll position fires none; so after scrolling stops or triggers refresh, re-apply whichever
+      // stop actually starts last above the current position.
+      settle = () => {
+        const y = scrollY;
+        const at = marks.reduce<Mark | null>((b, m) => (m.t.start <= y && (!b || m.t.start > b.t.start) ? m : b), null);
+        if (at) at.apply(); else toHero();
+      };
+      ScrollTrigger.addEventListener('scrollEnd', settle);
+      ScrollTrigger.addEventListener('refresh', settle);
+      ScrollTrigger.create({ trigger: '.outro', start: 'top 70%', onEnter: () => show((m) => m.overview(true)) });
       if (reduced) return;
       gsap.from('.hero-line', { yPercent: 110, opacity: 0, duration: 1.8, stagger: 0.12, ease: 'expo.out', delay: 0.2 });
     }, root);
@@ -207,6 +234,9 @@ export default function App() {
       io?.disconnect();
       ctx.revert();
       ScrollTrigger.removeEventListener('refresh', placeTicks);
+      ScrollTrigger.removeEventListener('scrollEnd', settle);
+      ScrollTrigger.removeEventListener('refresh', settle);
+      hudRo.disconnect();
       if (lenis) { gsap.ticker.remove(raf); lenis.destroy(); }
     };
   }, []);
@@ -221,10 +251,10 @@ export default function App() {
       </header>
 
       <div className="journey">
-        <aside className="arch-wrap" aria-hidden inert>
+        <aside className="arch-wrap" aria-label="Map of the walk">
           <div className="arch">
             <div ref={mapEl} className="map-layer" />
-            <div className="hud">
+            <div className="hud" aria-hidden>
               <span className="hud-n" />
               <div>
                 <strong className="hud-era" />
