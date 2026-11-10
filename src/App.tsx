@@ -60,14 +60,13 @@ chapters.order.forEach((id, k) => {
 });
 stops.forEach((st) => { st.at = st.located ? [st.photo.lng!, st.photo.lat!] : pointAt(route, cum, st.d).here; });
 const waypoints: Waypoint[] = stops.filter((s) => !s.outside).map((s) => ({ lng: s.at[0], lat: s.at[1], n: s.k + 1, located: s.located }));
-const grenoble = stops.filter((s) => s.outside || s.ch.caption?.includes('Grenoble')).length;
-const mapped = stops.filter((s) => s.located && !s.ch.caption?.includes('Grenoble')).length;
-const unplaced = stops.filter((s) => !s.located && !s.outside).length;
+const mapped = stops.filter((s) => s.located && !s.ch.barricade).length;
+const unplaced = stops.filter((s) => !s.located).length;
 
 function placeOf(st: Stop) {
   const { photo: p, ch } = st;
   if (st.located) return ch.place ?? [p.place, arrondissementLabel(p.arrondissement)].filter(Boolean).join(', ');
-  if (st.outside) return ch.place ?? 'Outside Paris';
+  if (st.outside) return ch.place ?? 'Exact spot not recorded';
   return ch.place ?? 'Exact spot not recorded';
 }
 
@@ -292,7 +291,7 @@ export default function App() {
                   <div className="approach-card">
                     <p className="kicker">On foot · stop {ROMAN[k + 1]}</p>
                     <h3>{p.title}</h3>
-                    <p className="walk-dist">{st.outside ? 'Grenoble · the same walls, another city' : <span className="walk-left">on the way</span>}</p>
+                    <p className="walk-dist">{st.outside ? 'Exact spot not recorded' : <span className="walk-left">on the way</span>}</p>
                     <p className="walk-street" />
                     <p className="walk-q" />
                   </div>
@@ -311,7 +310,7 @@ export default function App() {
                     <div className="ch-body">
                       <figure className="ch-plate">
                         <img src={photoUrl(p.mid)} srcSet={`${photoUrl(p.mid)} 800w, ${photoUrl(p.file)} 1600w`} sizes="(max-width: 800px) 90vw, 40vw" alt={p.title} width={p.width} height={p.height} loading="lazy" style={{ background: p.color }} />
-                        <figcaption>{ch.caption ?? (st.located ? formatCoords(p.lat!, p.lng!) : st.outside ? 'Taken in Grenoble' : 'Exact spot not recorded')}</figcaption>
+                        <figcaption>{ch.caption ?? (st.located ? formatCoords(p.lat!, p.lng!) : 'Exact spot not recorded')}</figcaption>
                       </figure>
                       <div className="ch-text">
                         <p className="kicker today">In the picture</p>
@@ -340,8 +339,8 @@ export default function App() {
             <p className="reveal kicker">End of the walk</p>
             <h2 className="reveal">Still boiling.</h2>
             <p className="reveal">
-              {km(total)} on foot through Paris. {mapped} photos pinned where they were taken, {grenoble} walls from Grenoble pinned to Paris's history of protest,
-              {' '}{unplaced} pictures whose exact spot wasn't recorded.
+              {km(total)} on foot through Paris. {mapped} photos pinned where they were taken, one pinned to the barricades of July 1830,
+              {' '}{unplaced} {unplaced === 1 ? 'picture' : 'pictures'} whose exact spot wasn't recorded.
             </p>
             <button className="reveal back" onClick={() => window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' })}>Back to Point Zero ↑</button>
           </section>

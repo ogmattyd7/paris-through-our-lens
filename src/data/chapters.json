@@ -32,14 +32,14 @@
       "when": "The barricade · 1588 → 1968",
       "text": [
         "« C'est votre système qui est violent, pas les lycéen·nes ! » — “It's your system that is violent, not the high-school kids!”, taped over the tags. Underneath, sprayed: NO WAR!, between stencilled rifles.",
-        "Taken in Grenoble, after the recent wave of mass protests. The question it asks is the oldest one in Paris: who is really violent, the street or the state?"
+        "The question it asks is the oldest one in Paris: who is really violent, the street or the state?"
       ],
       "scene": [
         "The word is Parisian. On 12 May 1588, the Day of the Barricades, Parisians rolled barrels (barriques) packed with earth and paving stones across the streets to stop Henri III's troops.",
         "Then it came back, again and again: the Fronde in 1648, July 1830, June 1832, February and June 1848, the Commune in 1871, the Liberation in August 1944, the night of 10 May 1968 on rue Gay-Lussac."
       ],
       "note": "",
-      "caption": "Photo taken in Grenoble · pinned where Paris fought in July 1830",
+      "caption": "Pinned where Paris fought in July 1830",
       "barricade": true,
       "art": {
         "commons": "Eugène Delacroix - La liberté guidant le peuple.jpg",
@@ -84,7 +84,7 @@
     "autocollant-revolution": {
       "era": "1920",
       "tone": "past",
-      "place": "A green door · exact spot not recorded",
+      "place": "Around the 5th arrondissement · a green door",
       "when": "Communist Paris · 1920 → 1936",
       "text": [
         "« Tu es communiste ? Rejoins-nous ! Révolution » — “Are you a communist? Join us! Revolution”. Someone has scrawled an answer across it: « Rebelle ? », “Rebel?”",
@@ -106,12 +106,13 @@
         "credit": "Agence de presse Meurisse. Agence photographique (commanditaire)",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Manifestation_du_Front_populaire_au_mur_des_F%C3%A9d%C3%A9r%C3%A9s_-_btv1b90282283.jpg"
-      }
+      },
+      "caption": "Around the 5th · exact address not recorded"
     },
     "affiches-pcr": {
       "era": "1844",
       "tone": "past",
-      "place": "A shop shutter · exact spot not recorded",
+      "place": "Around the 5th arrondissement · a shop shutter",
       "when": "Paris, capital of exiles · 1843 → 1916",
       "text": [
         "The same « Tu es communiste ? Rejoins-nous ! », pasted four times over a shop shutter under a bearded portrait and the letters PCR, the Parti communiste révolutionnaire.",
@@ -134,16 +135,16 @@
         "credit": "John Jabez Edwin Mayall",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png"
-      }
+      },
+      "caption": "Around the 5th · exact address not recorded"
     },
     "rue-du-palais": {
       "era": "1831",
       "tone": "past",
-      "place": "Grenoble",
       "when": "Mocking the king · 1831 → 1834",
       "text": [
         "Pencilled under a Rue du Palais sign: « Macron castration ». Crude, personal, aimed at the body of the man in power.",
-        "Taken in Grenoble. Going after the ruler's body is a Paris tradition."
+        "Going after the ruler's body is a Paris tradition."
       ],
       "scene": [
         "In 1831 Charles Philipon, on trial in Paris for insulting King Louis-Philippe, sketched the royal face melting into a pear. La poire became the regime's nickname, drawn on walls all over the city.",
@@ -167,11 +168,10 @@
     "une-solution-revolution": {
       "era": "1789",
       "tone": "past",
-      "place": "Grenoble",
       "when": "14 July 1789",
       "text": [
         "« Une solution : révolution » — “One solution: revolution”, sprayed on a pink wall.",
-        "Taken in Grenoble. The rhyme works because everyone knows which revolution comes first."
+        "The rhyme works because everyone knows which revolution comes first."
       ],
       "scene": [
         "On 14 July 1789 Parisians stormed the Bastille for its gunpowder. Within weeks the feudal privileges were abolished and the Declaration of the Rights of Man was voted.",
@@ -195,11 +195,10 @@
     "nike-la-police": {
       "era": "1968",
       "tone": "past",
-      "place": "Grenoble",
       "when": "May 1968 → now",
       "text": [
         "« Nike la police »: « Nique la police », “Fuck the police”, spelled like the American sportswear brand.",
-        "Taken in Grenoble. Rage and logo in a single word."
+        "Rage and logo in a single word."
       ],
       "scene": [
         "Paris has shouted at its police for a long time. In May 1968, after the riot police cleared the Sorbonne, the walls answered: « CRS = SS ».",
@@ -432,7 +431,7 @@
     "forza-napoli": {
       "era": "1987",
       "tone": "past",
-      "place": "A trattoria · exact spot not recorded",
+      "place": "A trattoria in the 15th",
       "when": "Naples, in Paris",
       "text": [
         "« Forza Napoli » on a blue banner over a small Italian restaurant, the windows covered in the club's colours."
@@ -453,7 +452,8 @@
         "credit": "Jean Béraud",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:B%C3%A9raud_-_Le_boulevard_des_Capucines,_le_soir,_devant_le_Caf%C3%A9_Napolitain,_Vers_1880.jpg"
-      }
+      },
+      "caption": "In the 15th · exact address not recorded"
     },
     "abribus-burger-king": {
       "era": "2012",
@@ -485,7 +485,7 @@
     "feu-vert": {
       "era": "1944",
       "tone": "modern",
-      "place": "A protest march · exact spot not recorded",
+      "place": "Near the Madeleine · a protest march",
       "when": "Pax Americana · 1944 → now",
       "text": [
         "« USA Champions », across the back of a man's jacket, crossing on the green light.",
@@ -507,12 +507,13 @@
         "credit": "Gustave Caillebotte",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg"
-      }
+      },
+      "caption": "Near the Madeleine · exact spot not recorded"
     },
     "gospel-dream": {
       "era": "1198",
       "tone": "past",
-      "place": "A concert poster · exact spot not recorded",
+      "place": "A concert poster in the 7th",
       "when": "Music under the vaults · 1198 → now",
       "text": [
         "« Gospel Dream — chants authentiques de l'église afro-américaine », “authentic songs of the African-American church”: a choir in purple robes, in concert at the Église Saint-Louis-d'Antin, Friday 1 May, 8:30 pm."
@@ -533,7 +534,8 @@
         "credit": "música de Pérotin",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:P%C3%A9rotin_-_Viderunt_omnes.jpg"
-      }
+      },
+      "caption": "In the 7th · exact spot not recorded"
     },
     "parc-de-l-etrange": {
       "era": "1786",

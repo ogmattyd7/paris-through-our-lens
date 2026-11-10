@@ -6,7 +6,7 @@
     "lat": 48.85643,
     "lng": 2.35253,
     "precision": "approx",
-    "clue": "Photo taken in Grenoble; mapped to the 1830 barricades"
+    "clue": "Mapped to the July 1830 barricades"
   },
   "vive-la-commune": {
     "step": 2,
@@ -16,6 +16,24 @@
     "lng": 2.38842,
     "precision": "approx",
     "clue": "Photographer: 11th, near Père-Lachaise"
+  },
+  "autocollant-revolution": {
+    "step": 3,
+    "title": "autocollant-revolution",
+    "place": "Around the 5th arrondissement",
+    "lat": 48.84444,
+    "lng": 2.35071,
+    "precision": "approx",
+    "clue": "Photographer: around the 5th"
+  },
+  "affiches-pcr": {
+    "step": 4,
+    "title": "affiches-pcr",
+    "place": "Around the 5th arrondissement",
+    "lat": 48.84444,
+    "lng": 2.35071,
+    "precision": "approx",
+    "clue": "Photographer: around the 5th"
   },
   "louvre-galerie-apollon": {
     "step": 8,
@@ -88,6 +106,33 @@
     "lng": 2.33641,
     "precision": "approx",
     "clue": "Photographer: toilets of the Jardin du Luxembourg"
+  },
+  "forza-napoli": {
+    "step": 16,
+    "title": "forza-napoli",
+    "place": "15th arrondissement",
+    "lat": 48.84009,
+    "lng": 2.29283,
+    "precision": "approx",
+    "clue": "Photographer: the 15th"
+  },
+  "feu-vert": {
+    "step": 18,
+    "title": "feu-vert",
+    "place": "Near the Madeleine",
+    "lat": 48.87005,
+    "lng": 2.32455,
+    "precision": "approx",
+    "clue": "Photographer: near the Madeleine"
+  },
+  "gospel-dream": {
+    "step": 19,
+    "title": "gospel-dream",
+    "place": "7th arrondissement",
+    "lat": 48.85617,
+    "lng": 2.31219,
+    "precision": "approx",
+    "clue": "Photographer: somewhere in the 7th"
   },
   "parc-de-l-etrange": {
     "step": 20,
